@@ -1,0 +1,5 @@
+{
+mainBox:
+  height: 400
+  _isVisible: true
+}
