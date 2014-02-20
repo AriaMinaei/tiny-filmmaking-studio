@@ -1,7 +1,7 @@
 {
   mainBox:
     height: 304
-    _isVisible: false
+    _isVisible: true
 
   timeline:
     _allProps:
@@ -12,7 +12,7 @@
           chronology:
             points: [
               t: 0
-              value: 465
+              value: 480
               id: "no-id-Opening Titles-Big Black Horse-X-point-0"
               handler: [
                 10
@@ -30,7 +30,7 @@
           chronology:
             points: [
               t: 0
-              value: 322
+              value: 463
               id: "no-id-Opening Titles-Big Black Horse-Y-point-0"
               handler: [
                 10
@@ -40,4 +40,12 @@
               ]
             ]
             connectors: []
+
+  timeControl:
+    t: 88.51674641148325
+    _focus:
+      from: 0
+      to: 1000
+
+    _lastPlayedTickAt: 0
 }
