@@ -1,0 +1,87 @@
+#display
+
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+
+	background: black
+
+#view
+
+	position: absolute
+
+	overflow: hidden
+
+	@include transform-style(flat)
+
+	background: black
+
+#stageLayer, #bgLayer
+
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+
+	@include transform-style(flat)
+
+#bgLayer
+
+	z-index: 0
+
+#stageLayer
+
+	z-index: 1
+
+#stage
+
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+
+	@include transform-style(preserve-3d)
+
+.container
+
+	left: 0
+	top: 0
+	bottom: 0
+	right: 0
+
+	position: absolute
+
+	@include transform-style(preserve-3d)
+
+.bg
+
+	left: 0
+	top: 0
+	bottom: 0
+	right: 0
+
+	position: absolute
+
+#view-gridOverlay
+
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+	z-index: 100
+
+	pointer-events: none
+
+	opacity: 0
+
+	transition: opacity 0.2s
+
+	&.visible
+
+		opacity: 1

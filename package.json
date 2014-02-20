@@ -1,0 +1,26 @@
+{
+  "name": "tiny-filmmaking-studio",
+  "private": true,
+  "version": "0.0.0",
+  "description": "(work in progress)",
+  "main": "scripts/js/lib/tinyFilmmakingStudio.js",
+  "scripts": {
+    "prepublish": "node ./node_modules/coffee-script/bin/cake build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AriaMinaei/tiny-filmmaking-studio.git"
+  },
+  "keywords": [],
+  "author": "Aria Minaei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AriaMinaei/tiny-filmmaking-studio"
+  },
+  "dependencies": {
+    "theatrejs": "*"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3"
+  }
+}
