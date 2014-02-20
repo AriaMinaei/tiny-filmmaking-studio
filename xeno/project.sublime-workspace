@@ -1,0 +1,2361 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mp",
+				"mp3Parser"
+			],
+			[
+				"fileB",
+				"fileBufferToArrayBuffer"
+			],
+			[
+				"uin",
+				"uint8"
+			],
+			[
+				"file",
+				"fileBuffer"
+			],
+			[
+				"cont",
+				"context"
+			],
+			[
+				"con",
+				"context"
+			],
+			[
+				"ter",
+				"trackAddress"
+			],
+			[
+				"_que",
+				"_queuedParts"
+			],
+			[
+				"_sch",
+				"_scheduledToPlay"
+			],
+			[
+				"parts",
+				"partsToSchedule"
+			],
+			[
+				"_pla",
+				"_playing"
+			],
+			[
+				"_read",
+				"_reportReadyToPlay"
+			],
+			[
+				"gett",
+				"getNextPart"
+			],
+			[
+				"get",
+				"getReadyToPlay"
+			],
+			[
+				"num",
+				"numberOfChannels"
+			],
+			[
+				"_g",
+				"_generatedConfig"
+			],
+			[
+				"_ge",
+				"_generateDeferred"
+			],
+			[
+				"part",
+				"partsCount"
+			],
+			[
+				"_gene",
+				"_generatedConfig"
+			],
+			[
+				"deco",
+				"decodedBuffer"
+			],
+			[
+				"_dec",
+				"_decodedBuffer"
+			],
+			[
+				"_d",
+				"_decodedBuffer"
+			],
+			[
+				"_is",
+				"_isPlaying"
+			],
+			[
+				"_get",
+				"_getPartIndexForTime"
+			],
+			[
+				"req",
+				"requestAnimationFrame"
+			],
+			[
+				"_lo",
+				"_loaded"
+			],
+			[
+				"_re",
+				"_remainingToLoad"
+			],
+			[
+				"Par",
+				"SplittedAudioTrackPart"
+			],
+			[
+				"tra",
+				"trackAddress"
+			],
+			[
+				"enco",
+				"encodedView"
+			],
+			[
+				"enc",
+				"encodedBuffer"
+			],
+			[
+				"Audio",
+				"AudioDrivenTimeControl"
+			],
+			[
+				"ad",
+				"addPoint"
+			],
+			[
+				"ser",
+				"serializedDirName"
+			],
+			[
+				"set",
+				"setVisibility"
+			],
+			[
+				"new",
+				"newExpansion"
+			],
+			[
+				"propH",
+				"propHolder"
+			],
+			[
+				"_list",
+				"_listenersForAllEvents"
+			],
+			[
+				"node",
+				"nodeHeight"
+			],
+			[
+				"rela",
+				"relayVertically"
+			],
+			[
+				"_hei",
+				"_height"
+			],
+			[
+				"_update",
+				"_updateHeight"
+			],
+			[
+				"timef",
+				"timeflow-timeline-prop"
+			],
+			[
+				"time",
+				"timeFlow"
+			],
+			[
+				"respo",
+				"response"
+			],
+			[
+				"_dis",
+				"_disabledEmitters"
+			],
+			[
+				"pend",
+				"pending"
+			],
+			[
+				"ne",
+				"newData"
+			],
+			[
+				"names",
+				"namespaceName"
+			],
+			[
+				"name",
+				"namespaceName"
+			],
+			[
+				"se",
+				"session"
+			],
+			[
+				"Connection",
+				"ConnectionToClient"
+			],
+			[
+				"data",
+				"dataHandler"
+			],
+			[
+				"pas",
+				"password"
+			],
+			[
+				"nams",
+				"namespaceIsCorrect"
+			],
+			[
+				"clien",
+				"clientId"
+			],
+			[
+				"_send",
+				"_sendNsAndPassword"
+			],
+			[
+				"def",
+				"deferred"
+			],
+			[
+				"deferr",
+				"deferred"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"dat",
+				"dataHandler"
+			],
+			[
+				"_set",
+				"_setupGit"
+			],
+			[
+				"nam",
+				"namespace"
+			],
+			[
+				"timel",
+				"timelinesPath"
+			],
+			[
+				"ac",
+				"acceptablePasswords"
+			],
+			[
+				"_auth",
+				"_authenticationResult"
+			],
+			[
+				"clie",
+				"clientId"
+			],
+			[
+				"_co",
+				"_connections"
+			],
+			[
+				"Con",
+				"ConnectionToClient"
+			],
+			[
+				"_Set",
+				"_setupSocket"
+			],
+			[
+				"_setup",
+				"_setupSocket"
+			],
+			[
+				"n",
+				"namespace"
+			],
+			[
+				"timeli",
+				"timelinesDir"
+			],
+			[
+				"exis",
+				"existsSync"
+			],
+			[
+				"timelin",
+				"timelinesDir"
+			],
+			[
+				"acti",
+				"activate"
+			],
+			[
+				"act",
+				"actorProp"
+			],
+			[
+				"actorP",
+				"actorPropId"
+			],
+			[
+				"PropH",
+				"WorkspacePropHolderModel"
+			],
+			[
+				"work",
+				"workspaceManager"
+			],
+			[
+				"seri",
+				"serializedKeys"
+			],
+			[
+				"sei",
+				"serializedKeys"
+			],
+			[
+				"laye",
+				"layerY"
+			],
+			[
+				"box",
+				"box1Y"
+			],
+			[
+				"setup",
+				"setupAndGetSerialized"
+			],
+			[
+				"box1",
+				"box1Y"
+			],
+			[
+				"timeF",
+				"timeFlow"
+			],
+			[
+				"prop",
+				"propHolders"
+			],
+			[
+				"_ac",
+				"_activeWorkspaceName"
+			],
+			[
+				"cat",
+				"categories"
+			],
+			[
+				"timeline",
+				"timelineLength"
+			],
+			[
+				"_des",
+				"_deselectListener"
+			],
+			[
+				"ar",
+				"arrayIndex"
+			],
+			[
+				"timeFl",
+				"timeFlowProp"
+			],
+			[
+				"fps",
+				"fpsT"
+			],
+			[
+				"lo",
+				"localFromX"
+			],
+			[
+				"_sel",
+				"_select"
+			],
+			[
+				"layer",
+				"layerX"
+			],
+			[
+				"might",
+				"mightChangeValue"
+			],
+			[
+				"isC",
+				"isConnectedToTheLeft"
+			],
+			[
+				"was",
+				"wasConnectedToRight"
+			],
+			[
+				"getLe",
+				"getLeftPoint"
+			],
+			[
+				"getR",
+				"getRightPoint"
+			],
+			[
+				"rig",
+				"rightBound"
+			],
+			[
+				"add",
+				"addConnector"
+			],
+			[
+				"old",
+				"oldLeftPoint"
+			],
+			[
+				"wasC",
+				"wasConnectedToLeft"
+			],
+			[
+				"righ",
+				"rightBound"
+			],
+			[
+				"lef",
+				"leftBound"
+			],
+			[
+				"getRi",
+				"getRightPoint"
+			],
+			[
+				"getLef",
+				"getLeftPoint"
+			],
+			[
+				"_show",
+				"_showHandlers"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"Dra",
+				"onDrag"
+			],
+			[
+				"no",
+				"node"
+			],
+			[
+				"_draval",
+				"_prepareNodeDragValueInteractions"
+			],
+			[
+				"_prteNcon",
+				"_prepareNodeConnectionInteractions"
+			],
+			[
+				"_pre",
+				"_prepareNodeClick"
+			],
+			[
+				"canCo",
+				"canConnectToLeft"
+			],
+			[
+				"from",
+				"fromY"
+			],
+			[
+				"cou",
+				"couldConnectToLeft"
+			],
+			[
+				"abs",
+				"absX"
+			],
+			[
+				"can",
+				"canConnectToRight"
+			],
+			[
+				"bor",
+				"border-color"
+			],
+			[
+				"remo",
+				"removeClass"
+			],
+			[
+				"cla",
+				"classAddedOnCtrlHover"
+			],
+			[
+				"clas",
+				"classAddedOnCtrlHover"
+			],
+			[
+				"isCo",
+				"isConnectedToTheLeft"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/E/pg/tiny-filmmaking-studio-template/scripts/coffee/film/sets/OpeningTitlesSet.coffee",
+			"settings":
+			{
+				"buffer_size": 1159,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/pg/tiny-filmmaking-studio-template/styles/sass/_sets.sass",
+			"settings":
+			{
+				"buffer_size": 30,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/pg/tiny-filmmaking-studio-template/styles/sass/sets/_openingTitles.sass",
+			"settings":
+			{
+				"buffer_size": 147,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"diff",
+				"Modific: Show diff"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"disabk",
+				"Package Control: Disable Package"
+			],
+			[
+				"instl",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"coffee",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"glsl",
+				"Set Syntax: GLSL"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"coffe",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"tr",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sygls",
+				"Set Syntax: GLSL"
+			],
+			[
+				"clos",
+				"File: Close All"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"gls",
+				"Set Syntax: GLSL"
+			],
+			[
+				"syntax gls",
+				"Set Syntax: GLSL"
+			],
+			[
+				"inst",
+				"Snippet: instance"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"synbat",
+				"Set Syntax: Batch File"
+			],
+			[
+				"sore",
+				"Sore: Run Command"
+			],
+			[
+				"syncoff",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"uppe",
+				"Convert Case: Upper Case"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"syn c++",
+				"Set Syntax: C++"
+			],
+			[
+				"syncof",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"cake",
+				"Coffee: Run Cake Task"
+			],
+			[
+				"run",
+				"Cake: Run Command"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"coff",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"re",
+				"File: Rename"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"low",
+				"Convert Case: Lower Case"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"dis",
+				"Coffee: Display JavaScript"
+			],
+			[
+				"ren",
+				"File: Rename"
+			],
+			[
+				"package",
+				"Package Control: Disable Package"
+			],
+			[
+				"syn coff",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"syn cof",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"syn cp",
+				"Set Syntax: camlp4"
+			],
+			[
+				"sync of",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"synjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syco",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"synmd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"syn ja",
+				"Set Syntax: JSON Generic Array"
+			],
+			[
+				"syn",
+				"Set Syntax: CSS"
+			],
+			[
+				"syn ru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"syn pyt",
+				"Set Syntax: Python"
+			],
+			[
+				"syn js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"dupl",
+				"File: Duplicate"
+			],
+			[
+				"coffeel",
+				"CoffeeLint: Lint code"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"syn xml",
+				"Set Syntax: XML"
+			],
+			[
+				"synxm",
+				"Set Syntax: TeX Math"
+			],
+			[
+				"syn subl",
+				"Set Syntax: Sublime Text Snippet (Raw)"
+			],
+			[
+				"js2",
+				"JS2Coffee: Convert & Make New File"
+			],
+			[
+				"handle",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"",
+				"Coffee: Display JavaScript"
+			],
+			[
+				"comp",
+				"Coffee: Compile File"
+			],
+			[
+				"synt sub",
+				"Set Syntax: Sublime Settings"
+			],
+			[
+				"syn sub",
+				"Set Syntax: Sublime Settings"
+			],
+			[
+				"web ins",
+				"Web Inspector"
+			],
+			[
+				"jslint",
+				"JSLint: Show JSLint Result"
+			],
+			[
+				"lint",
+				"JSLint: Run JSLint"
+			],
+			[
+				"jsli",
+				"JSLint"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"syini",
+				"Set Syntax: INI"
+			],
+			[
+				"syp",
+				"Set Syntax: Python"
+			],
+			[
+				"sypy",
+				"Set Syntax: Python"
+			],
+			[
+				"synpy",
+				"Set Syntax: Python"
+			],
+			[
+				"synini",
+				"Set Syntax: INI"
+			],
+			[
+				"ini",
+				"Set Syntax: INI"
+			],
+			[
+				"disjs",
+				"Coffee: Display JavaScript"
+			],
+			[
+				"disj",
+				"Coffee: Display JavaScript"
+			],
+			[
+				"synec",
+				"Set Syntax: HTML (ECO)"
+			],
+			[
+				"syn ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"node",
+				"NodeEval"
+			],
+			[
+				"sy cof l",
+				"Set Syntax: CoffeeScript (Literate)"
+			],
+			[
+				"sy sas",
+				"Set Syntax: Sass"
+			],
+			[
+				"ril",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"syn liter",
+				"Set Syntax: Literate Haskell"
+			],
+			[
+				"sycof",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"repack",
+				"Package Control: Remove Package"
+			],
+			[
+				"fjs",
+				"Find JS file"
+			],
+			[
+				"findj",
+				"Find JS file"
+			],
+			[
+				"find",
+				"Find JS file"
+			],
+			[
+				"incre",
+				"Increment Selection"
+			],
+			[
+				"incremen",
+				"Increment Selection"
+			],
+			[
+				"incr",
+				"Emmet: Increment Number by 1"
+			],
+			[
+				"syjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sxjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"base",
+				"StringEncode: Base64 Decode"
+			],
+			[
+				"synt cof",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"synt java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"emmet",
+				"Emmet: Split\\Join Tag"
+			],
+			[
+				"goto mat",
+				"Emmet: Go to Matching Pair"
+			],
+			[
+				"match ",
+				"Emmet: Match Pair (outward)"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"comment",
+				"Emmet: Toggle Comment"
+			],
+			[
+				"close ta",
+				"Snippet: Wrap Selection in Open/Close Tag"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"synt c",
+				"Set Syntax: C"
+			],
+			[
+				"mdn",
+				"MDN: Search from Input"
+			],
+			[
+				"html",
+				"Snippet: html"
+			],
+			[
+				"add fol",
+				"Project: Add Folder"
+			],
+			[
+				"open file",
+				"Favorite Files: Open File(s)"
+			],
+			[
+				"files sid",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"open fi",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"search",
+				"File: Search Files"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Package Control: dis",
+				"Package Control: Discover Packages"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"color",
+				"Color picker"
+			],
+			[
+				"help",
+				"Help"
+			],
+			[
+				"inst	",
+				"Package Control: Install Package"
+			],
+			[
+				"packa	",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 287.0,
+		"history":
+		[
+			"view.window().project_file_name()",
+			"view.window()",
+			"view.window",
+			"view",
+			"sublime.run_command('shell_command')",
+			"sublime.run_command",
+			"run_command",
+			"sublime.status_message('ss')",
+			"dir(sublime)",
+			"ss",
+			"sublime.run_command('sore')",
+			"sublime.run_command",
+			"sublime",
+			"ss",
+			"dir(window)",
+			"window",
+			"window.project_file_name()",
+			"window.project_file_name",
+			"sublime.Window.project_file_name(window)",
+			"window",
+			"sublime.Window.project_file_name(window)",
+			"sublime.Window.project_file_name(0)",
+			"sublime.Window.project_file_name(this)",
+			"sublime.Window.project_file_name(self)",
+			"sublime.Window.project_file_name(sublime.Window.project)",
+			"sublime.Window.project_file_name(sublime.Window)",
+			"sublime.Window.project_file_name(Window)",
+			"sublime.Window.project_file_name()",
+			"sublime.Window.project_file_name",
+			"dir('ss')",
+			"dir(sublime.Window)",
+			"dir(sublime.Window.views)",
+			"dir(sublime.Window)",
+			"dir(sublime.Window.project_file_name)",
+			"dir(sublime.Window)",
+			"dir(sublime.Window.project_file)",
+			"dir(sublime.Window)",
+			"dir(sublime.window)",
+			"dir(sublime)",
+			"inspect(sublime)",
+			"sublime",
+			"run_command(cake)",
+			"cake()",
+			"os.getcwd()",
+			"import os",
+			"os.getcwd()",
+			"print(\"hi\")",
+			"print(a)",
+			"print a",
+			"a = \"hi\"",
+			"print \"hi\"",
+			"window.run_command('debugnode')",
+			"sdf",
+			"window.run_command('debugnode')",
+			"view.run_command('debugnode')",
+			"view.run_command('nodebug')",
+			"sublime.packages_path()",
+			"sublime",
+			"debugnode()",
+			"run_command()",
+			"run_command"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/open-source/tiny-filmmaking-studio/node_modules/coffee-script/package.json",
+		"/E/open-source/tiny-filmmaking-studio/package.json",
+		"/E/pg/tiny-filmmaking-studio-template/wtch.bat",
+		"/E/open-source/tiny-filmmaking-studio/styles/css/main.css",
+		"/E/pg/tiny-filmmaking-studio-template/template/xeno/project.sublime-workspace",
+		"/E/pg/tiny-filmmaking-studio-template/template/xeno/errors.log",
+		"/E/pg/tiny-filmmaking-studio-template/template/xeno/project.sublime-project",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/scripts/coffee/film/sets/OpeningTitlesSet.coffee",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/wtch.bat",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/styles/css/main.css",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/scripts/coffee/film/editIt.coffee",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/scripts/coffee/film/lanes/bigBlackHorse.coffee",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/scripts/coffee/server/serveTheatre.coffee",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/lanes/bigBlackHorse.cson",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/xeno/project.sublime-project",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/pages/film.html",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/styles/sass/_sets.sass",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/styles/sass/sets/_bigBlackHorse.sass",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/styles/sass/main.sass",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/styles/sass/sets/_pwt.sass",
+		"/E/open-source/tiny-filmmaking-studio/xeno/template/LICENSE",
+		"/E/open-source/tiny-filmmaking-studio/scripts/coffee/lib/film/Display.coffee",
+		"/E/open-source/tiny-filmmaking-studio/scripts/coffee/lib/editingFilm/editingTheatre.coffee",
+		"/E/open-source/tiny-filmmaking-studio/scripts/coffee/lib/EditingFilm.coffee",
+		"/E/open-source/tiny-filmmaking-studio/scripts/js/lib/Film.js",
+		"/E/open-source/tiny-filmmaking-studio/scripts/coffee/lib/film/Set.coffee",
+		"/E/open-source/tiny-filmmaking-studio/scripts/coffee/lib/tinyFilmmakingStudio.coffee",
+		"/E/open-source/tiny-filmmaking-studio/wtch.bat",
+		"/E/open-source/tiny-filmmaking-studio/scripts/coffee/server/serve.coffee",
+		"/E/open-source/tiny-filmmaking-studio/xeno/project.sublime-project",
+		"/E/open-source/tiny-filmmaking-studio/scripts/coffee/tinyFilmmakingStudio.coffee",
+		"/E/pg/starter/xeno/project.sublime-project",
+		"/E/pg/starter/.gitignore",
+		"/E/open-source/mp3-framedata/wtch.bat",
+		"/E/pg/starter/wtch.bat",
+		"/E/open-source/theatrejs/scripts/coffee/test/tools/audio/Mp3Inspector.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/pg/audio.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/tools/audio/SplittedAudioTrack.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/tools/audio/splittedAudioTrack/SplittedAudioTrackPart.coffee",
+		"/E/open-source/theatrejs/node_modules/mp3-parser/mp3-parser.js",
+		"/E/open-source/theatrejs/scripts/js/lib/tools/audio/SplittedAudioTrack.js",
+		"/E/open-source/theatrejs/scripts/coffee/lib/tools/audio/SplittedAudioTrackConfigGenerator.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/pg/audio/config.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/tools/AudioThingy.coffee",
+		"/E/open-source/utila/package.json",
+		"/E/open-source/theatrejs/styles/sass/_parts/mainBox/_workspaceButtons.sass",
+		"/E/open-source/theatrejs/scripts/coffee/lib/server/DataHandler.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/DynamicTimeline.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorView/mainBoxView/timelineView/propView/PointView.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorView/mainBoxView/timelineView/PropView.coffee",
+		"/E/open-source/theatrejs/scripts/js/lib/server/DataHandler.js",
+		"/E/open-source/theatrejs/scripts/coffee/lib/server/Session.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorView/mainBoxView/WorkspaceListView.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/dynamicTimeline/prop/pacs/Connector.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorModel/communicator/ConnectionToServer.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorView/ControlsView.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/tools/AudioDrivenTimeControl.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/dynamicTimeline/prop/Pacs.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorView/mainBoxView/WorkspaceButtonsView.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorModel/workspaceManagerModel/WorkspaceModel.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorModel/WorkspaceManagerModel.coffee",
+		"/E/open-source/theatrejs/styles/sass/_parts/mainBox/_workspaceList.sass",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorView/mainBoxView/timelineView/PropViewRepo.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/theatre.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/EditorModel.coffee",
+		"/E/open-source/theatrejs/styles/sass/_parts/mainBox/_timelineEditor.sass",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorView/mainBoxView/TimelineEditorView.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorModel/TimelineEditorModel.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorModel/TimeControlModel.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/pg/pg.coffee",
+		"/E/open-source/theatrejs/scripts/dist/pg.js",
+		"/E/open-source/theatrejs/scripts/js/pg/pg.js",
+		"/E/open-source/theatrejs/scripts/coffee/pg/scene/1.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/dynamicTimeline/Prop.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/server/serve.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/Theatre.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorModel/Communicator.coffee",
+		"/E/open-source/pretty-error/package.json",
+		"/E/open-source/pretty-monitor/package.json",
+		"/E/pg/theatrejs-pg/timelines/pg1.cson",
+		"/E/pg/theatrejs-pg/timelines/pg1.json",
+		"/E/open-source/theatrejs/scripts/coffee/lib/server/session/ConnectionToClient.coffee",
+		"/E/open-source/theatrejs/package.json",
+		"/E/open-source/theatrejs/scripts/coffee/lib/dynamicTimeline/IncrementalIsolate.coffee",
+		"/E/open-source/theatrejs/scripts/coffee/lib/editorView/mainBoxView/timelineView/propView/_ItemView.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/dynamicTimeline/Prop.coffee",
+		"/E/open-source/timeflow/xeno/project.sublime-project",
+		"/E/open-source/timeflow/scripts/coffee/pg/scene/1.coffee",
+		"/E/open-source/timeflow/styles/sass/_parts/_graph.sass",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorModel/GraphModel.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorModel/graphModel/CategoryModel.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/EditorView.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/EditorModel.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/_DynamicModel.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorModel/Communicator.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/server/Session.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/server/DataHandler.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorModel/graphModel/categoryModel/ActorModel.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorModel/workspaceManagerModel/WorkspaceModel.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorView/GraphView.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorView/mainBoxView/timelineView/PropView.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/DynamicTimeline.coffee",
+		"/E/open-source/timeflow/styles/sass/_prepare/_reset.sass",
+		"/E/open-source/timeflow/styles/sass/_prepare/_general.sass",
+		"/E/open-source/timeflow/styles/sass/main.sass",
+		"/E/open-source/timeflow/scripts/coffee/lib/dynamicTimeline/prop/Pacs.coffee",
+		"/E/open-source/timeflow/scripts/coffee/test/dynamicTimeline/prop/Pacs.coffee",
+		"/E/open-source/timeflow/scripts/coffee/pg/scene.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorView/mainBoxView/timelineView/propView/PointView.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorView/ControlsView.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorView/MainBoxView.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorView/mainBoxView/SeekbarView.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorView/mainBoxView/TimelineEditorView.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorView/mainBoxView/timelineView/propView/Selection.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorView/mainBoxView/timelineView/propView/SvgArea.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorView/mainBoxView/WorkspaceButtonsView.coffee",
+		"/E/open-source/timeflow/scripts/coffee/lib/editorView/mainBoxView/WorkspaceListView.coffee",
+		"/E/open-source/timeflow/styles/sass/_parts/_controls.sass",
+		"/E/open-source/timeflow/styles/sass/_parts/_mainBox.sass",
+		"/E/open-source/timeflow/styles/sass/_parts/mainBox/_seekbar.sass",
+		"/E/open-source/timeflow/styles/sass/_parts/mainBox/_timelineEditor.sass",
+		"/E/open-source/timeflow/styles/sass/_parts/mainBox/_workspaceButtons.sass",
+		"/E/open-source/timeflow/styles/sass/_parts/mainBox/_workspaceList.sass",
+		"/E/open-source/timeflow/styles/sass/_parts/mainBox/timelineEditor/_pacs.sass",
+		"/E/open-source/timeflow/styles/sass/_parts/mainBox/timelineEditor/pacsTimeline/_point.sass",
+		"/E/open-source/timeflow/styles/sass/_parts/mainBox/timelineEditor/pacsTimeline/_pointHandler.sass",
+		"/E/open-source/timeflow/styles/sass/_parts/mainBox/timelineEditor/pacsTimeline/_pointValueContainer.sass",
+		"/E/open-source/timeflow/styles/sass/_parts/mainBox/timelineEditor/pacsTimeline/_selection.sass"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 148.0,
+		"where_history":
+		[
+			"E:\\open-source\\tiny-filmmaking-studio\\scripts\\coffee\\lib",
+			"E:\\open-source\\theatrejs\\scripts\\coffee\\lib",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib",
+			"E:\\open-source\\timeflow\\styles\\sass",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\pg",
+			"E:\\open-source\\timeflow\\styles\\sass",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\pg",
+			"E:\\open-source\\timeflow\\styles\\sass",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib",
+			"E:\\open-source\\timeflow\\styles\\sass",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib\\editorView\\mainBoxView\\timelineView",
+			"E:\\open-source\\timeflow\\styles\\sass\\_parts\\mainBox\\timelineEditor",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib\\editorView\\mainBoxView\\timelineView\\propView",
+			"E:\\open-source\\timeflow\\styles\\sass",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib\\editorView",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib\\editorView\\mainBoxView\\timelineView\\propView",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib\\editorView\\mainBoxView\\timelineView",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib\\tools",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib\\editorView\\timelineView",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib",
+			"E:\\open-source\\timeflow\\styles\\sass",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib\\editorView",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib\\editorModel",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib\\editorModel",
+			"E:\\open-source\\timeflow\\scripts\\coffee\\lib",
+			"E:\\open-source\\gila\\scripts\\coffee\\lib",
+			"E:\\pg\\webgl\\webgl-lessons-lab\\scripts\\coffee\\pages\\page1",
+			"C:\\nodist\\bin\\node_modules\\wrapup\\lib\\output",
+			"E:\\pg\\webgl\\webgl-lessons-lab\\scripts\\coffee\\pages\\1",
+			"F:\\open-source\\RenderKid\\scripts\\coffee\\lib",
+			"F:\\host\\RenderKid\\scripts\\coffee\\lib",
+			"F:\\host\\lax\\scripts\\coffee\\lib",
+			"F:\\host\\bodo\\pado\\scripts\\coffee\\test",
+			"F:\\host\\bodo\\pado\\scripts\\coffee",
+			"F:\\host\\bodo\\pado\\scripts\\coffee\\lib\\pado\\event",
+			"F:\\host\\bodo\\pado\\scripts\\coffee",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments\\scripts\\coffee\\lib",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments\\scripts\\test\\lib",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments\\scripts\\coffee\\lib",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments\\scripts\\coffee\\demos",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments\\scripts\\coffee\\lib",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments\\scripts\\coffee",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments\\scripts\\js",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments\\scripts\\coffee",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments\\scripts\\coffee\\lib\\gesture\\definitions\\standard",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments\\scripts\\coffee\\lib\\gesture\\definitions\\standard",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments\\demos",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments\\scripts\\coffee\\lib",
+			"S:\\EMR\\side\\touch\\simple\\FastTouchAndDomExperiments\\scripts\\coffee",
+			"T:\\SitcomServer\\SitcomMainstream\\Apps\\SitcomTestGiver\\Branches\\1.x\\1.2\\static\\themes\\friendly\\common\\assets\\stylesheets\\sassy\\src\\screen",
+			"T:\\SitcomServer\\SitcomMainstream\\Apps\\SitcomTestGiver\\Branches\\1.x\\1.2\\app",
+			"T:\\Sitcom Xampp\\xampp\\apache\\conf",
+			"T:\\SitcomServer\\SitcomMainstream\\Library\\Zend\\1.11-stripped\\library\\Zend",
+			"G:\\Ubi\\SL\\20.1\\Data\\Packages"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"bigBlackHorse",
+			"aNx",
+			"yellowBg",
+			"setupDanzaKuduro",
+			"LasManosArribaSet",
+			"sub",
+			"E:\\\\open-source\\\\tiny-filmmaking-studio",
+			"node",
+			"_queuedParts",
+			"config.trackAddress",
+			"_getASource",
+			"schedule",
+			"Next",
+			"timer",
+			"_wasPlaying",
+			"getReadyToPlay",
+			"load",
+			"_getDecodedBuffer",
+			"part",
+			"byteLength",
+			"_tracksStartAt",
+			"partsCount",
+			"@",
+			"getASource",
+			"_decodeDeferred",
+			"_scheduledToPlay",
+			"_getReadyToPlay",
+			"_canPlayTime",
+			"_Emitter",
+			"_loaded",
+			"numberWidth",
+			"cson",
+			"replace",
+			"addConnec",
+			"addPoint",
+			"_addPoint",
+			"log",
+			"foxie",
+			"window",
+			"100 * 1024",
+			"processBuffer",
+			"didSer",
+			"didSerce",
+			"_lastReplaceHeadDataPromise",
+			"_scheduleToReplaceHeadData",
+			"log",
+			"fpsT",
+			"DynamicTimeline",
+			":\\\\open-source\\\\timeflow",
+			"category",
+			"Category",
+			"category",
+			"Category",
+			"category",
+			"ategory",
+			"getHeadDataForNamespace",
+			"replaceHeadDataForNamespace",
+			"imeFlow",
+			"DynamicTimeFlow",
+			"timeflow",
+			"timeflow-",
+			"timeline-",
+			"imeflow",
+			"timeFlow",
+			"dynamic",
+			"imeFlow",
+			".timeline",
+			"_timeline",
+			"timeline",
+			".timeline",
+			"@pacs.timeline",
+			"pacs",
+			".timeline",
+			".timeline.",
+			"@timeline",
+			"_Pacstem",
+			"PacsTimeline",
+			"_PacsTimelineItem",
+			"Timeline",
+			"PacsTimeline",
+			"timeline",
+			"@timeline.",
+			"@timeline",
+			"timeline",
+			"@timeline.",
+			"timeline",
+			"-timeline-",
+			"timeline",
+			"TimelineView",
+			"mainBox",
+			"TimelineModel",
+			"timeline",
+			".timeline.",
+			".timeline,",
+			"TimelineModel",
+			"Timeline",
+			"setVisibility",
+			"mainBox.on",
+			"_updateVertically",
+			"_show",
+			"mainBox",
+			"_re",
+			"_resizeNode",
+			"height",
+			"hide",
+			"show",
+			"	show: ->\n",
+			"hide",
+			"isVisible",
+			"ullScr",
+			"ullscr",
+			"ullScr",
+			"llScre",
+			"_prepareFullscreenNode",
+			"_updateTimelineLength",
+			"timelineLength =",
+			"timelineLength",
+			"		x / @width * @timelineLength\n",
+			"_updateTimelineLength",
+			"timelineLength",
+			"_reactToFocusChangeAndDecideOnRepositioningElements",
+			"_isNecessaryToReadjustSeeker",
+			"_repositionElements",
+			"_resetSpace",
+			"_isNecessaryToReadjustSeeker",
+			"_prepareFocus",
+			"ControlsMod",
+			"ControlsView"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"group",
+			"Group",
+			"group",
+			"Group",
+			"group",
+			"imeline",
+			"theatrejs-",
+			"imeline",
+			"@timelineEditor.",
+			"-timelineEditor-",
+			"TimelineView",
+			"@rootView.cursor",
+			"@rootView.kilid",
+			"@rootView.moosh",
+			"@prop._YToNormalizedVal",
+			"@prop._XToTime",
+			"@prop._valToY",
+			"@prop._normalizedValToY",
+			"@prop._timeToX",
+			"kilid",
+			"@kilid",
+			"moosh",
+			"@moosh",
+			"onClickOutside",
+			"onClick",
+			"@mainBox",
+			"Graph",
+			"graph",
+			"_Emitter",
+			"editor",
+			"imeFlow",
+			"_emit",
+			"@_gl",
+			"._gila",
+			"@_gila",
+			"require 'joiful-experiments'",
+			".length",
+			"getter",
+			".events",
+			"@__defineGetter__ 'events', -> @_events",
+			"Targets ",
+			"addBubbleTargets",
+			"addBubbleTarget\naddBubbleTargets",
+			"remove",
+			"fire",
+			"add",
+			"fire",
+			"add",
+			"Easing",
+			"visuals",
+			"id",
+			"dommy.get",
+			"scale",
+			".s",
+			"Scale",
+			".t",
+			"Translation",
+			"translate",
+			".t",
+			"translation",
+			"move",
+			"Rotate",
+			"Movement",
+			"movement",
+			".m",
+			"move",
+			"Movement",
+			"movement",
+			".m",
+			"Movement",
+			"movement",
+			".m",
+			"@_lastV",
+			"_initFromEvent",
+			"(defineGesture)",
+			"transform-instant",
+			"base",
+			"instant-transform",
+			"instant-move",
+			"instant-transform",
+			"getTypes",
+			"_first",
+			"T:"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/E/pg/tiny-filmmaking-studio-template/scripts/coffee/film/sets/OpeningTitlesSet.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1076,
+								1076
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 532.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/E/pg/tiny-filmmaking-studio-template/styles/sass/_sets.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 30,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								22
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/E/pg/tiny-filmmaking-studio-template/styles/sass/sets/_openingTitles.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 147,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								147,
+								147
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 37.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.find_results":
+	{
+		"height": 214.0
+	},
+	"project": "project.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"film",
+				"lib\\Film.coffee"
+			],
+			[
+				"edit",
+				"lib\\editingFilm\\editingTheatre.coffee"
+			],
+			[
+				"displ",
+				"lib\\film\\Display.coffee"
+			],
+			[
+				"pointview",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\PointView.coffee"
+			],
+			[
+				"datahandl",
+				"lib\\server\\DataHandler.coffee"
+			],
+			[
+				"datahand",
+				"lib\\server\\DataHandler.coffee"
+			],
+			[
+				"point",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\PointView.coffee"
+			],
+			[
+				"pointvie",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\PointView.coffee"
+			],
+			[
+				"prop",
+				"lib\\editorView\\mainBoxView\\timelineView\\PropView.coffee"
+			],
+			[
+				"dynamic",
+				"lib\\DynamicTimeline.coffee"
+			],
+			[
+				"propvi",
+				"lib\\editorView\\mainBoxView\\timelineView\\PropView.coffee"
+			],
+			[
+				"workspabu",
+				"sass\\_parts\\mainBox\\_workspaceButtons.sass"
+			],
+			[
+				"workslis",
+				"lib\\editorView\\mainBoxView\\WorkspaceListView.coffee"
+			],
+			[
+				"sessio",
+				"lib\\server\\Session.coffee"
+			],
+			[
+				"timeline",
+				"lib\\DynamicTimeline.coffee"
+			],
+			[
+				"connec",
+				"lib\\dynamicTimeline\\prop\\pacs\\Connector.coffee"
+			],
+			[
+				"commu",
+				"lib\\editorModel\\communicator\\ConnectionToServer.coffee"
+			],
+			[
+				"increme",
+				"lib\\dynamicTimeline\\IncrementalIsolate.coffee"
+			],
+			[
+				"dyn",
+				"lib\\DynamicTimeline.coffee"
+			],
+			[
+				"pacs",
+				"lib\\dynamicTimeline\\prop\\Pacs.coffee"
+			],
+			[
+				"seekba",
+				"lib\\editorView\\mainBoxView\\SeekbarView.coffee"
+			],
+			[
+				"timeledit",
+				"lib\\editorView\\mainBoxView\\TimelineEditorView.coffee"
+			],
+			[
+				"mainbox",
+				"lib\\editorView\\MainBoxView.coffee"
+			],
+			[
+				"mainb",
+				"lib\\editorModel\\MainBoxModel.coffee"
+			],
+			[
+				"contro",
+				"lib\\editorView\\ControlsView.coffee"
+			],
+			[
+				"controls",
+				"sass\\_parts\\_controls.sass"
+			],
+			[
+				"timelienvie",
+				"lib\\editorView\\mainBoxView\\TimelineView.coffee"
+			],
+			[
+				"main",
+				"lib\\editorModel\\MainBoxModel.coffee"
+			],
+			[
+				"control",
+				"lib\\editorView\\ControlsView.coffee"
+			],
+			[
+				"propview",
+				"lib\\editorView\\mainBoxView\\timelineView\\PropView.coffee"
+			],
+			[
+				"propholde",
+				"lib\\editorModel\\workspaceManagerModel\\workspaceModel\\WorkspacePropHolderModel.coffee"
+			],
+			[
+				"worskmana",
+				"lib\\editorModel\\WorkspaceManagerModel.coffee"
+			],
+			[
+				"workspace",
+				"lib\\editorModel\\workspaceManagerModel\\WorkspaceModel.coffee"
+			],
+			[
+				"timelin",
+				"sass\\_parts\\mainBox\\_timeline.sass"
+			],
+			[
+				"emit",
+				"lib\\_Emitter.coffee"
+			],
+			[
+				"propholder",
+				"lib\\editorModel\\workspaceManagerModel\\workspaceModel\\WorkspacePropHolderModel.coffee"
+			],
+			[
+				"timelsas",
+				"sass\\_parts\\mainBox\\_timeline.sass"
+			],
+			[
+				"propvie",
+				"lib\\editorView\\mainBoxView\\timelineView\\PropView.coffee"
+			],
+			[
+				"works",
+				"lib\\editorModel\\workspaceManagerModel\\WorkspaceModel.coffee"
+			],
+			[
+				"datah",
+				"lib\\server\\DataHandler.coffee"
+			],
+			[
+				"sess",
+				"lib\\server\\Session.coffee"
+			],
+			[
+				"toser",
+				"lib\\editorModel\\communicator\\ConnectionToServer.coffee"
+			],
+			[
+				"dyna",
+				"lib\\_Dynamic.coffee"
+			],
+			[
+				"pacsti",
+				"lib\\dynamic\\prop\\PacsTimeline.coffee"
+			],
+			[
+				"edito",
+				"lib\\EditorView.coffee"
+			],
+			[
+				"mainbo",
+				"lib\\editorModel\\MainBoxModel.coffee"
+			],
+			[
+				"serv",
+				"lib\\Server.coffee"
+			],
+			[
+				"tocli",
+				"lib\\server\\ConnectionToClient.coffee"
+			],
+			[
+				"prophold",
+				"lib\\editorModel\\workspaceManagerModel\\workspaceModel\\WorkspacePropHolderModel.coffee"
+			],
+			[
+				"increment",
+				"lib\\dynamic\\IncrementalIsolate.coffee"
+			],
+			[
+				"editrmode",
+				"lib\\EditorModel.coffee"
+			],
+			[
+				"workspaprop",
+				"lib\\editorModel\\workspaceManagerModel\\workspaceModel\\WorkspacePropHolderModel.coffee"
+			],
+			[
+				"grap",
+				"lib\\editorModel\\GraphModel.coffee"
+			],
+			[
+				"worekmode",
+				"lib\\editorModel\\workspaceManagerModel\\WorkspaceModel.coffee"
+			],
+			[
+				"wors",
+				"lib\\editorModel\\WorkspaceManagerModel.coffee"
+			],
+			[
+				"pacst",
+				"lib\\dynamic\\prop\\PacsTimeline.coffee"
+			],
+			[
+				"dynami",
+				"lib\\DynamicTimeFlow.coffee"
+			],
+			[
+				"editorm",
+				"lib\\EditorModel.coffee"
+			],
+			[
+				"editvi",
+				"lib\\EditorView.coffee"
+			],
+			[
+				"workspa",
+				"lib\\editorModel\\workspaceManagerModel\\WorkspaceModel.coffee"
+			],
+			[
+				"model",
+				"lib\\EditorModel.coffee"
+			],
+			[
+				"timecont",
+				"lib\\editorModel\\TimeControlModel.coffee"
+			],
+			[
+				"pacstimline",
+				"lib\\dynamic\\prop\\PacsTimeline.coffee"
+			],
+			[
+				"pacstime",
+				"lib\\dynamic\\prop\\PacsTimeline.coffee"
+			],
+			[
+				"selec",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\Selection.coffee"
+			],
+			[
+				"actomo",
+				"lib\\editorModel\\graphModel\\categoryModel\\ActorModel.coffee"
+			],
+			[
+				"poivi",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\PointView.coffee"
+			],
+			[
+				"timel",
+				"lib\\editorView\\mainBoxView\\TimelineView.coffee"
+			],
+			[
+				"poi",
+				"sass\\_parts\\mainBox\\timeline\\pacsTimeline\\_point.sass"
+			],
+			[
+				"pointvi",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\PointView.coffee"
+			],
+			[
+				"graph",
+				"lib\\editorView\\GraphView.coffee"
+			],
+			[
+				"poin",
+				"sass\\_parts\\mainBox\\timeline\\pacsTimeline\\_point.sass"
+			],
+			[
+				"timeli",
+				"lib\\editorView\\mainBoxView\\TimelineView.coffee"
+			],
+			[
+				"cusr",
+				"lib\\tools\\CursorControl.coffee"
+			],
+			[
+				"pointv",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\PointView.coffee"
+			],
+			[
+				"seekb",
+				"lib\\editorView\\mainBoxView\\SeekbarView.coffee"
+			],
+			[
+				"seek",
+				"lib\\editorView\\mainBoxView\\SeekbarView.coffee"
+			],
+			[
+				"t",
+				"lib\\editorModel\\TimeControlModel.coffee"
+			],
+			[
+				"manboxv",
+				"lib\\editorView\\MainBoxView.coffee"
+			],
+			[
+				"butt",
+				"lib\\editorView\\mainBoxView\\WorkspaceButtonsView.coffee"
+			],
+			[
+				"butto",
+				"lib\\editorView\\mainBoxView\\WorkspaceButtonsView.coffee"
+			],
+			[
+				"worslis",
+				"lib\\editorView\\mainBoxView\\WorkspaceListView.coffee"
+			],
+			[
+				"worksbut",
+				"lib\\editorView\\mainBoxView\\WorkspaceButtonsView.coffee"
+			],
+			[
+				"worsbu",
+				"lib\\editorView\\mainBoxView\\WorkspaceButtonsView.coffee"
+			],
+			[
+				"worspalist",
+				"lib\\editorView\\mainBoxView\\WorkspaceListView.coffee"
+			],
+			[
+				"mouse",
+				"pg\\mouse.coffee"
+			],
+			[
+				"seekbvie",
+				"lib\\editorView\\mainBoxView\\SeekbarView.coffee"
+			],
+			[
+				"poit",
+				"lib\\dynamic\\prop\\pacsTimeline\\Point.coffee"
+			],
+			[
+				"itmvie",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\_ItemView.coffee"
+			],
+			[
+				"pacshandl",
+				"sass\\_parts\\mainBox\\timeline\\pacsTimeline\\_pointHandler.sass"
+			],
+			[
+				"connecv",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\ConnectorView.coffee"
+			],
+			[
+				"1",
+				"pg\\1.coffee"
+			],
+			[
+				"povioe",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\PointView.coffee"
+			],
+			[
+				"poine",
+				"lib\\dynamic\\prop\\pacsTimeline\\Point.coffee"
+			],
+			[
+				"pointe",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\PointView.coffee"
+			],
+			[
+				"stupidc",
+				"lib\\tools\\StupidClickManager.coffee"
+			],
+			[
+				"item",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\_ItemView.coffee"
+			],
+			[
+				"click",
+				"lib\\tools\\StupidClickManager.coffee"
+			],
+			[
+				"svgar",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\SvgArea.coffee"
+			],
+			[
+				"connectoir",
+				"lib\\editorView\\mainBoxView\\timelineView\\propView\\ConnectorView.coffee"
+			],
+			[
+				"connect",
+				"lib\\dynamic\\prop\\pacsTimeline\\Connector.coffee"
+			],
+			[
+				"propv",
+				"lib\\editorView\\mainBoxView\\timelineView\\PropView.coffee"
+			],
+			[
+				"pcs",
+				"sass\\_parts\\mainBox\\timeline\\_pacs.sass"
+			],
+			[
+				"pacsm",
+				"lib\\dynamic\\prop\\PacsTimeline.coffee"
+			],
+			[
+				"tie",
+				"lib\\editorModel\\TimelineModel.coffee"
+			],
+			[
+				"seeker",
+				"lib\\editorView\\mainBoxView\\SeekbarView.coffee"
+			],
+			[
+				"_prop",
+				"lib\\dynamic\\_Prop.coffee"
+			],
+			[
+				"proph",
+				"lib\\editorModel\\workspaceManagerModel\\workspaceModel\\WorkspacePropHolderModel.coffee"
+			],
+			[
+				"timc",
+				"lib\\editorModel\\TimeControlModel.coffee"
+			],
+			[
+				"worsklis",
+				"lib\\editorView\\mainBoxView\\WorkspaceListView.coffee"
+			],
+			[
+				"worskpalis",
+				"lib\\editorView\\mainBoxView\\WorkspaceListView.coffee"
+			],
+			[
+				"grapho",
+				"lib\\editorView\\GraphView.coffee"
+			],
+			[
+				"graphvi",
+				"lib\\editorView\\GraphView.coffee"
+			],
+			[
+				"workspabut",
+				"lib\\editorView\\mainBoxView\\WorkspaceButtonsView.coffee"
+			],
+			[
+				"worsmode",
+				"lib\\editorModel\\workspaceManagerModel\\WorkspaceModel.coffee"
+			],
+			[
+				"workspamana",
+				"lib\\editorModel\\WorkspaceManagerModel.coffee"
+			],
+			[
+				"graphomod",
+				"lib\\editorModel\\graphModel\\CategoryModel.coffee"
+			],
+			[
+				"stupidcli",
+				"lib\\tools\\StupidClickManager.coffee"
+			],
+			[
+				"worsp",
+				"lib\\editorModel\\WorkspaceManagerModel.coffee"
+			],
+			[
+				"seekbarvi",
+				"lib\\editorView\\timelineView\\SeekbarView.coffee"
+			],
+			[
+				"graphov",
+				"lib\\editorView\\GraphView.coffee"
+			],
+			[
+				"tcontr",
+				"lib\\editorModel\\TimeControlModel.coffee"
+			],
+			[
+				"timcon",
+				"lib\\editorModel\\TimeControlModel.coffee"
+			],
+			[
+				"stupi",
+				"lib\\tools\\StupidKeyboardManager.coffee"
+			],
+			[
+				"contr",
+				"lib\\editorModel\\ControlsModel.coffee"
+			],
+			[
+				"c",
+				"lib\\editorView\\ControlsView.coffee"
+			],
+			[
+				"timef",
+				"lib\\DynamicTimeFlow.coffee"
+			],
+			[
+				"dynai",
+				"lib\\DynamicTimeFlow.coffee"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"tinyfilm",
+				"E:\\open-source\\tiny-filmmaking-studio\\xeno\\project.sublime-project"
+			],
+			[
+				"glsl",
+				"E:\\open-source\\glsl-playground\\xeno\\project.sublime-project"
+			],
+			[
+				"audio",
+				"E:\\pg\\audio-api\\xeno\\project.sublime-project"
+			],
+			[
+				"yatta-gl",
+				"E:\\open-source\\yatta-gl\\xeno\\project.sublime-project"
+			],
+			[
+				"thea",
+				"E:\\pg\\theatrejs-pg\\xeno\\project.sublime-project"
+			],
+			[
+				"renderkid",
+				"F:\\open-source\\RenderKid\\xeno\\project.sublime-project"
+			],
+			[
+				"kilid",
+				"E:\\open-source\\kilid\\xeno\\project.sublime-project"
+			],
+			[
+				"yata-gl",
+				"E:\\open-source\\yatta-gl\\xeno\\project.sublime-project"
+			],
+			[
+				"yatta-g",
+				"E:\\open-source\\yatta-gl\\xeno\\project.sublime-project"
+			],
+			[
+				"stg",
+				"T:\\SitcomServer\\SitcomMainstream\\Apps\\SitcomTestGiver\\Branches\\1.x\\1.2\\internal\\project.sublime-project"
+			],
+			[
+				"yatta",
+				"E:\\open-source\\yatta-gl\\xeno\\project.sublime-project"
+			],
+			[
+				"foxie",
+				"E:\\open-source\\foxie\\xeno\\project.sublime-project"
+			],
+			[
+				"transof",
+				"E:\\open-source\\transformation\\xeno\\project.sublime-project"
+			],
+			[
+				"transform",
+				"E:\\open-source\\transformation\\xeno\\project.sublime-project"
+			],
+			[
+				"trans",
+				"E:\\open-source\\transformation\\xeno\\project.sublime-project"
+			],
+			[
+				"timing",
+				"E:\\open-source\\raf-timing\\xeno\\project.sublime-project"
+			],
+			[
+				"transforma",
+				"E:\\open-source\\transformation\\xeno\\project.sublime-project"
+			],
+			[
+				"gila",
+				"E:\\open-source\\gila\\xeno\\project.sublime-project"
+			],
+			[
+				"utila",
+				"F:\\host\\utila\\xeno\\project.sublime-workspace"
+			],
+			[
+				"dummer",
+				"F:\\host\\dummer\\xeno\\project.sublime-project"
+			],
+			[
+				"prettyer",
+				"F:\\host\\pretty-error\\xeno\\project.sublime-project"
+			],
+			[
+				"pretty",
+				"F:\\host\\pretty-error\\xeno\\project.sublime-project"
+			],
+			[
+				"renderk",
+				"F:\\host\\RenderKid\\xeno\\project.sublime-project"
+			],
+			[
+				"pad",
+				"F:\\host\\bodo\\pado\\xeno\\project.sublime-project"
+			],
+			[
+				"touch",
+				"/S/EMR/side/touch/simple/.project.sublime-project"
+			],
+			[
+				"pado",
+				"/F/host/bodo/pado/xeno/project.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 236.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

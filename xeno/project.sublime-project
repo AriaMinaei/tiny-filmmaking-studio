@@ -1,0 +1,29 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "..\\images"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "..\\pages"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "..\\scripts\\coffee\\lib"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "..\\styles\\sass"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "..\\scripts\\coffee\\film"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "..\\lanes"
+		}
+	]
+}

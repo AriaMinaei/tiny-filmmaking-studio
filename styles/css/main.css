@@ -1,0 +1,9 @@
+@import url(../../node_modules/tiny-filmmaking-studio/styles/css/main.css);
+/* line 1, ../sass/sets/_openingTitles.sass */
+#openingTitles-container .title {
+  font-family: Helvetica, sans-serif;
+  color: white;
+  font-size: 160px;
+  display: inline-block;
+  position: absolute;
+}
