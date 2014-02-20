@@ -15,18 +15,21 @@ module.exports = class OpeningTitlesSet extends Set
 		greyBg = @_makeEl '#openingTitles-greyBg.bg'
 		.inside @film.display.bgLayer
 
-		container = @_makeEl '#lma-container.container'
+		# it's good practice to have all of our objects inside one
+		# or more containers:
+		container = @_makeEl '#openingTitles-container.container'
 		.inside @film.display.stageEl
 
-
-
-		aNx = @_makeEl '.titular'
+		# Let's add some text to our set:
+		bigBlackHorse = @_makeEl '.title'
+		# put it inside our container:
 		.inside container
-		.html 'A&X'
+		.html 'Big Black Horse'
 		.css
 
-			fontSize: 68
+			fontSize: 72
 
-		@_setupDomEl 'LMA', 'A&X', aNx, [
-			'translation', 'wysihwyg', 'rotation', 'opacity', 'scale', 'skew'
+		# this will introduce our text element to theatrejs:
+		@_setupDomEl 'Opening Titles', 'Big Black Horse', bigBlackHorse, [
+			'translation', 'rotation', 'opacity', 'scale', 'skew', 'wysihwyg'
 		]

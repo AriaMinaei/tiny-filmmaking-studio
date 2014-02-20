@@ -1,5 +1,43 @@
 {
-mainBox:
-  height: 400
-  _isVisible: true
+  mainBox:
+    height: 304
+    _isVisible: false
+
+  timeline:
+    _allProps:
+      "no-id-Opening Titles-Big Black Horse-X":
+        pacs:
+          _idCounter: 0
+          chronologyLength: 0
+          chronology:
+            points: [
+              t: 0
+              value: 465
+              id: "no-id-Opening Titles-Big Black Horse-X-point-0"
+              handler: [
+                10
+                0
+                10
+                0
+              ]
+            ]
+            connectors: []
+
+      "no-id-Opening Titles-Big Black Horse-Y":
+        pacs:
+          _idCounter: 0
+          chronologyLength: 0
+          chronology:
+            points: [
+              t: 0
+              value: 322
+              id: "no-id-Opening Titles-Big Black Horse-Y-point-0"
+              handler: [
+                10
+                0
+                10
+                0
+              ]
+            ]
+            connectors: []
 }
