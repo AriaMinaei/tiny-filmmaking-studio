@@ -7,13 +7,75 @@
     _allProps:
       "no-id-Opening Titles-Big Black Horse-X":
         pacs:
-          _idCounter: 0
-          chronologyLength: 0
+          _idCounter: 1
+          chronologyLength: 88.51674641148325
           chronology:
             points: [
-              t: 0
-              value: 480
-              id: "no-id-Opening Titles-Big Black Horse-X-point-0"
+              {
+                t: 0
+                value: 480
+                id: "no-id-Opening Titles-Big Black Horse-X-point-0"
+                handler: [
+                  10
+                  0
+                  10
+                  0
+                ]
+              }
+              {
+                t: 88.51674641148325
+                value: 607
+                id: "no-id-Opening Titles-Big Black Horse-X-point-1"
+                handler: [
+                  10
+                  0
+                  10
+                  0
+                ]
+              }
+            ]
+            connectors: []
+
+      "no-id-Opening Titles-Big Black Horse-Y":
+        pacs:
+          _idCounter: 1
+          chronologyLength: 88.51674641148325
+          chronology:
+            points: [
+              {
+                t: 0
+                value: 463
+                id: "no-id-Opening Titles-Big Black Horse-Y-point-0"
+                handler: [
+                  10
+                  0
+                  10
+                  0
+                ]
+              }
+              {
+                t: 88.51674641148325
+                value: 457
+                id: "no-id-Opening Titles-Big Black Horse-Y-point-1"
+                handler: [
+                  10
+                  0
+                  10
+                  0
+                ]
+              }
+            ]
+            connectors: []
+
+      "no-id-Opening Titles-And a Cherry Tree-X":
+        pacs:
+          _idCounter: 0
+          chronologyLength: 88.51674641148325
+          chronology:
+            points: [
+              t: 88.51674641148325
+              value: 826
+              id: "no-id-Opening Titles-And a Cherry Tree-X-point-0"
               handler: [
                 10
                 0
@@ -23,15 +85,15 @@
             ]
             connectors: []
 
-      "no-id-Opening Titles-Big Black Horse-Y":
+      "no-id-Opening Titles-And a Cherry Tree-Y":
         pacs:
           _idCounter: 0
-          chronologyLength: 0
+          chronologyLength: 88.51674641148325
           chronology:
             points: [
-              t: 0
-              value: 463
-              id: "no-id-Opening Titles-Big Black Horse-Y-point-0"
+              t: 88.51674641148325
+              value: 429
+              id: "no-id-Opening Titles-And a Cherry Tree-Y-point-0"
               handler: [
                 10
                 0

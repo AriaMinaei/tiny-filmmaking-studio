@@ -33,3 +33,14 @@ module.exports = class OpeningTitlesSet extends Set
 		@_setupDomEl 'Opening Titles', 'Big Black Horse', bigBlackHorse, [
 			'translation', 'rotation', 'opacity', 'scale', 'skew', 'wysihwyg'
 		]
+
+		aact = @_makeEl '.title'
+		.inside container
+		.html 'And A Cherry Tree'
+		.css
+
+			fontSize: 36
+
+		@_setupDomEl 'Opening Titles', 'And a Cherry Tree', aact, [
+			'translation', 'rotation', 'opacity', 'scale', 'skew', 'wysihwyg'
+		]
