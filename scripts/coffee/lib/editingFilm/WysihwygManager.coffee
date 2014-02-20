@@ -361,12 +361,6 @@ module.exports = class WysihwygManager
 
 		@moosh.onClick el, => @_takeControl el, actors
 
-		setTimeout =>
-
-			@_takeControl el, actors
-
-		, 50
-
 		return
 
 	_takeControl: (el, actors) ->

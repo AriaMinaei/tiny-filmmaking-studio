@@ -18,9 +18,14 @@
     "url": "https://github.com/AriaMinaei/tiny-filmmaking-studio"
   },
   "dependencies": {
-    "theatrejs": "*"
+    "theatrejs": "*",
+    "gila": "*",
+    "moosh": "*",
+    "kilid": "*",
+    "utila": "*",
+    "stupid-dom-interface": "*"
   },
   "devDependencies": {
-    "coffee-script": "~1.6.3"
+    "coffee-script": "~1.7.1"
   }
 }
