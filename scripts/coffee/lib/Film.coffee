@@ -1,5 +1,6 @@
 Display = require './film/Display'
 HallowText = require './tools/HallowText'
+ShyText = require './tools/ShyText'
 object = require 'utila/scripts/js/lib/object'
 
 module.exports = class Film
@@ -125,6 +126,20 @@ module.exports = class Film
 			@wysihwyg.control el,
 
 				main: actor
+
+		if 'shyText' in props
+
+			shyText = new ShyText el
+
+			shyTextObjectName = objName + '-shyText'
+
+			@theatre.timeline.addObject shyTextObjectName, shyText
+
+			shyActor = @theatre.model.graph.getGroup groupName
+			.getActor actorName + ' - shyText'
+
+			shyActor.addPropOfObject 'First Visible Character Index', shyTextObjectName, 'showFrom', 0
+			shyActor.addPropOfObject 'Last Visible Character Index',  shyTextObjectName, 'showTo',   0
 
 		actor
 
