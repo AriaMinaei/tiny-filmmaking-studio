@@ -46,6 +46,16 @@ module.exports = class Film
 
 		@
 
+	_addNormalizedAlternative: (obj, methodName, newMethodName) ->
+
+		normalize = @display.normalize
+
+		func = obj[methodName]
+
+		obj[newMethodName] = (n) -> func.call @, normalize n
+
+		return
+
 	_setupDomEl: (groupName, actorName, el, props) ->
 
 		objName = String(groupName + ' ' + actorName).replace(/\s+/g, '-').toLowerCase()
@@ -69,15 +79,23 @@ module.exports = class Film
 
 		if not shouldAccountForProps or 'translation' in props
 
-			actor.addPropOfObject 'X', objName, 'x', 0
-			actor.addPropOfObject 'Y', objName, 'y', 0
-			actor.addPropOfObject 'Z', objName, 'z', 0
+			@_addNormalizedAlternative el, 'x', 'xNormalized'
+			@_addNormalizedAlternative el, 'y', 'yNormalized'
+			@_addNormalizedAlternative el, 'z', 'zNormalized'
+
+			actor.addPropOfObject 'X', objName, 'xNormalized', 0
+			actor.addPropOfObject 'Y', objName, 'yNormalized', 0
+			actor.addPropOfObject 'Z', objName, 'zNormalized', 0
 
 		if not shouldAccountForProps or 'localTranslation' in props
 
-			actor.addPropOfObject 'Local X', objName, 'localX', 0
-			actor.addPropOfObject 'Local Y', objName, 'localY', 0
-			actor.addPropOfObject 'Local Z', objName, 'localZ', 0
+			@_addNormalizedAlternative el, 'localX', 'localXNormalized'
+			@_addNormalizedAlternative el, 'localY', 'localYNormalized'
+			@_addNormalizedAlternative el, 'localZ', 'localZNormalized'
+
+			actor.addPropOfObject 'Local X', objName, 'localXNormalized', 0
+			actor.addPropOfObject 'Local Y', objName, 'localYNormalized', 0
+			actor.addPropOfObject 'Local Z', objName, 'localZNormalized', 0
 
 		if not shouldAccountForProps or 'transformOrigin' in props
 
@@ -98,8 +116,11 @@ module.exports = class Film
 
 		if not shouldAccountForProps or 'dims' in props
 
-			actor.addPropOfObject 'Width', objName, 'width', 0
-			actor.addPropOfObject 'Height', objName, 'height', 0
+			@_addNormalizedAlternative el, 'width', 'widthNormalized'
+			@_addNormalizedAlternative el, 'height', 'heightNormalized'
+
+			actor.addPropOfObject 'Width', objName, 'widthNormalized', 0
+			actor.addPropOfObject 'Height', objName, 'heightNormalized', 0
 
 		if 'hallowText' in props
 
@@ -112,13 +133,17 @@ module.exports = class Film
 			hallowActor = @theatre.model.graph.getGroup groupName
 			.getActor actorName + ' - HallowText'
 
-			hallowActor.addPropOfObject 'Base Radius', hallowTextObjectName, 'setBaseRadius', 0
-			hallowActor.addPropOfObject 'Max Motion Radius', hallowTextObjectName, 'setMaxMotionRadius', 10
+			@_addNormalizedAlternative hallowText, 'setBaseRadius', 'setBaseRadiusNormalized'
+			@_addNormalizedAlternative hallowText, 'setMaxMotionRadius', 'setMaxMotionRadiusNormalized'
+			@_addNormalizedAlternative hallowText, 'setVelocityX', 'setVelocityXNormalized'
+			@_addNormalizedAlternative hallowText, 'setVelocityY', 'setVelocityYNormalized'
+
+			hallowActor.addPropOfObject 'Base Radius', hallowTextObjectName, 'setBaseRadiusNormalized', 0
+			hallowActor.addPropOfObject 'Max Motion Radius', hallowTextObjectName, 'setMaxMotionRadiusNormalized', 10
 			hallowActor.addPropOfObject 'Samples', hallowTextObjectName, 'setSamples', 5
 
-
-			hallowActor.addPropOfObject 'Velocity X', hallowTextObjectName, 'setVelocityX', 0
-			hallowActor.addPropOfObject 'Velocity Y', hallowTextObjectName, 'setVelocityY', 0
+			hallowActor.addPropOfObject 'Velocity X', hallowTextObjectName, 'setVelocityXNormalized', 0
+			hallowActor.addPropOfObject 'Velocity Y', hallowTextObjectName, 'setVelocityYNormalized', 0
 
 		if 'wysihwyg' in props
 
@@ -142,6 +167,9 @@ module.exports = class Film
 			port: 6543
 
 			pass: 'no pass'
+
+			sourceScreen: [1680, 1050]
+
 		}
 
 	self = @

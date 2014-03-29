@@ -1,11 +1,14 @@
-AirBox = require '../tools/AirBox'
 El = require 'stupid-dom-interface'
+AirBox = require '../tools/AirBox'
+Relateur = require '../tools/Relateur'
 
 module.exports = class Display
 
 	constructor: (@film) ->
 
 		@aspectRatio = @film.options.aspectRatio
+
+		@sourceScreen = @film.options.sourceScreen
 
 		@airBox = new AirBox @aspectRatio
 
@@ -38,3 +41,11 @@ module.exports = class Display
 			.y @airBox.y
 
 			return
+
+		@relateur = new Relateur @height, @airBox._calculateDims(@sourceScreen[0], @sourceScreen[1]).height
+
+		@normalize = @relateur.normalize
+
+		@fromResolution = (n, w, h) =>
+
+			@normalize n, @airBox._calculateDims(w, h).height

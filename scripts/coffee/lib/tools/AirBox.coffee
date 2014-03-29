@@ -15,7 +15,7 @@ module.exports = class AirBox extends Emitter
 
 		@_chipAways = new Uint16Array 4
 
-		do @_calculateDims
+		{@width, @height} = @_calculateDims window.screen.width, window.screen.height
 
 		window.addEventListener 'resize', @_recalculateTransform
 
@@ -45,21 +45,21 @@ module.exports = class AirBox extends Emitter
 
 		do @_recalculateTransform
 
-	_calculateDims: ->
+	_calculateDims: (w, h) ->
 
-		{width, height} = window.screen
-
-		screenRatio = width / height
+		screenRatio = w / h
 
 		if @ratio >= screenRatio
 
-			@width = width
-			@height = width / @ratio
+			width = w
+			height = w / @ratio
 
 		else
 
-			@height = height
-			@width = @height * @ratio
+			height = h
+			width = height * @ratio
+
+		{width, height}
 
 	_recalculateTransform: =>
 

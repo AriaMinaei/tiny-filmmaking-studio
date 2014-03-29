@@ -6,6 +6,10 @@ module.exports = class Set
 
 		@_pieceBoundriesEventControllerTypesCount = 0
 
+		@_normalize = @film.display.normalize
+
+		@_fromResolution = @film.display.fromResolution
+
 	_setupDomEl: ->
 
 		@film._setupDomEl.apply @film, arguments
