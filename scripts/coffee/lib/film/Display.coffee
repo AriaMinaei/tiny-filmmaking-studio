@@ -30,7 +30,6 @@ module.exports = class Display
 		.inside @viewEl
 
 		@stageEl = El '#stage'
-		.perspective 800
 		.inside @stageLayerEl
 
 		@airBox.on 'transform-change', =>

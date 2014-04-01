@@ -20,7 +20,7 @@ module.exports = class Film
 
 	_initRaf: ->
 
-		listeners = @_listeners = []
+		listeners = @_tickListeners = []
 
 		requestAnimationFrame frame = (t) ->
 
@@ -30,9 +30,9 @@ module.exports = class Film
 
 			requestAnimationFrame frame
 
-	tick: (listener) ->
+	onTick: (listener) ->
 
-		@_listeners.push listener
+		@_tickListeners.push listener
 
 	addSet: (set) ->
 

@@ -19,7 +19,7 @@ module.exports = class EditingTheatre
 
 		mainBox.on 'height-change', @_resetAirbox
 
-		@film.tick @view.tick
+		@film.onTick @view.tick
 
 		@model.communicateWith 'http://localhost:' + @film.options.port, @film.options.lane, @film.options.pass
 
