@@ -1,6 +1,7 @@
 Film = require './Film'
 Kilid = require 'kilid'
 Grids = require './editingFilm/Grids'
+DullSlideshow = require './tools/DullSlideshow'
 EditingTheatre = require './editingFilm/EditingTheatre'
 WysihwygManager = require './editingFilm/WysihwygManager'
 
@@ -29,3 +30,7 @@ module.exports = class EditingFilm extends Film
 		@theatre.model.run()
 
 		@
+
+	createDullSlideshow: (groupName, actorName, bgPrefix, bgPostfix) ->
+
+		new DullSlideshow @, groupName, actorName, bgPrefix, bgPostfix
