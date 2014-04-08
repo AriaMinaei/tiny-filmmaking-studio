@@ -48,6 +48,12 @@ module.exports = class Film
 
 	_addNormalizedAlternative: (obj, methodName, newMethodName) ->
 
+		unless @display.normalize?
+
+			obj[newMethodName] = obj[methodName]
+
+			return
+
 		normalize = @display.normalize
 
 		func = obj[methodName]

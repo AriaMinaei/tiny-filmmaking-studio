@@ -43,6 +43,8 @@ module.exports = class EditingTheatre
 
 	_resetAirbox: =>
 
+		return unless @film.display.airBox?
+
 		unless @_fitDisplayWithMainBox
 
 			@film.display.airBox.chipAwayFromBottom 0

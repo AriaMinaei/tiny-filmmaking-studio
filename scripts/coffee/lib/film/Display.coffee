@@ -10,17 +10,10 @@ module.exports = class Display
 
 		@sourceScreen = @film.options.sourceScreen
 
-		@airBox = new AirBox @aspectRatio
-
 		@el = El '#display'
 		.inside document.body
 
-		@width = @airBox.width
-		@height = @airBox.height
-
 		@viewEl = El '#view'
-		.width @airBox.width
-		.height @airBox.height
 		.inside display
 
 		@stageLayerEl = El '#stageLayer'
@@ -31,6 +24,17 @@ module.exports = class Display
 
 		@stageEl = El '#stage'
 		.inside @stageLayerEl
+
+		return if typeof @aspectRatio isnt 'number'
+
+		@airBox = new AirBox @aspectRatio
+
+		@width = @airBox.width
+		@height = @airBox.height
+
+		@viewEl
+		.width @airBox.width
+		.height @airBox.height
 
 		@airBox.on 'transform-change', =>
 
