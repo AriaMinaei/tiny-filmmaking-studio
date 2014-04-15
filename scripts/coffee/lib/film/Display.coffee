@@ -10,7 +10,7 @@ module.exports = class Display
 
 		@sourceScreen = @film.options.sourceScreen
 
-		@el = El '#display'
+		@el = display = El '#display'
 		.inside document.body
 
 		@viewEl = El '#view'

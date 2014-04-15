@@ -1,0 +1,43 @@
+.film-display
+
+	position: absolute
+
+	background: black
+
+	top: 0
+	left: 0
+
+	@include transform-origin(top left)
+
+.film-animatedDisplay
+
+	@include transition(-webkit-transform 0.3s)
+
+.film-display-view
+
+	position: absolute
+
+	background: black
+
+	overflow: hidden
+	@include transform-style(flat)
+
+	&.responsive
+
+		width: 100%
+		height: 100%
+
+.film-display-dummy
+
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+
+	opacity: 0
+	pointer-events: none
+
+.film-unscrollableDisplayParent
+
+	overflow: hidden
