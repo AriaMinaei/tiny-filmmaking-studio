@@ -1,9 +1,11 @@
 El = require 'stupid-dom-interface'
-Emitter = require 'utila/scripts/js/lib/Emitter'
+_Display = require './_Display'
 
-module.exports = class RestorableResponsiveDisplay extends Emitter
+module.exports = class ResponsiveRestorableDisplay extends _Display
 
-	constructor: (restoreTarget, parent = document.body) ->
+	constructor: (parent, restoreTarget) ->
+
+		@el = El '.film-responsiveRestorableDisplay'
 
 		super
 
@@ -20,9 +22,6 @@ module.exports = class RestorableResponsiveDisplay extends Emitter
 		@restoredDims = width: 0, height: 0, top: 0, left: 0, scaleX: 1, scaleY: 1
 		@currentDims = @restoredDims
 
-		@el = El '.film-display.responsive.restorable'
-		.inside @parent
-
 		@view = El '.film-display-view.responsive'
 		.inside @el
 
@@ -35,17 +34,6 @@ module.exports = class RestorableResponsiveDisplay extends Emitter
 			do @toggle
 
 		do @_prepareLayers
-
-	_prepareLayers: ->
-
-		@_stageLayer = El '.film-display-view-stageLayer'
-		.inside @view
-
-		@bg = El '.film-display-view-bg'
-		.inside @view
-
-		@stage = El '.film-display-view-stage'
-		.inside @_stageLayer
 
 	_layout: (emit = yes) ->
 
