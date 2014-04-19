@@ -1,27 +1,19 @@
-#display
-
-	position: fixed
-	top: 0
-	bottom: 0
-	left: 0
-	right: 0
-
-	background: black
-
-#view
+.film-display-view
 
 	position: absolute
-
 	overflow: hidden
 
 	@include transform-style(flat)
 
-	background: black
+// #display
 
-	width: 100%
-	height: 100%
+// 	position: fixed
+// 	top: 0
+// 	bottom: 0
+// 	left: 0
+// 	right: 0
 
-#stageLayer, #bgLayer
+.film-display-view-stageLayer, .film-display-view-bgLayer
 
 	position: absolute
 	top: 0
@@ -31,15 +23,15 @@
 
 	@include transform-style(flat)
 
-#bgLayer
+.film-display-view-bgLayer
 
 	z-index: 0
 
-#stageLayer
+.film-display-view-stageLayer
 
 	z-index: 1
 
-#stage
+.film-display-view-stageContainer
 
 	position: absolute
 	top: 0
@@ -49,7 +41,7 @@
 
 	@include transform-style(preserve-3d)
 
-.container
+.film-display-view-stageContainer-setContainer
 
 	left: 0
 	top: 0
@@ -60,7 +52,7 @@
 
 	@include transform-style(preserve-3d)
 
-.bg
+.film-display-view-bgEl
 
 	left: 0
 	top: 0
@@ -69,26 +61,28 @@
 
 	position: absolute
 
-#view-gridOverlay
+// #view-gridOverlay
 
-	position: absolute
-	top: 0
-	right: 0
-	bottom: 0
-	left: 0
+// 	position: absolute
+// 	top: 0
+// 	right: 0
+// 	bottom: 0
+// 	left: 0
 
-	z-index: 100
+// 	z-index: 100
 
-	pointer-events: none
+// 	pointer-events: none
 
-	opacity: 0
+// 	opacity: 0
 
-	transition: opacity 0.2s
+// 	transition: opacity 0.2s
 
-	&.visible
+// 	&.visible
 
-		opacity: 1
+// 		opacity: 1
 
-.dullSlideshow
+// .dullSlideshow
 
-	background-size: cover
+// 	background-size: cover
+
+@import "./display/responsiveFullscreenDisplay "
