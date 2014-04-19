@@ -1,0 +1,82 @@
+.filmPlayer-controls
+
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 11
+
+	@include transform-style(flat)
+	@include transition(all 0.3s)
+
+.filmPlayer-controls-container
+
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	height: 50px
+
+.filmPlayer-controls-playPause
+
+	position: absolute
+
+	left: 50px
+	width: 12px
+	height: 12px
+
+	&:before, &:after
+
+		@include psuedo
+
+		position: absolute
+		width: 5px
+		height: 15px
+
+		background: #333
+
+	&:after
+
+		left: 9px
+
+.filmPlayer-controls-seekbar
+
+	position: absolute
+
+	width: calc(100% - 210px)
+	@include transition(all 0.3s)
+
+	left: 90px
+	top: 6px
+
+	&:before
+
+		@include psuedo
+
+		position: absolute
+		left: 0
+		right: 0
+		height: 3px
+
+		background: #333
+
+.filmPlayer-controls-seekbar-seeker
+
+	position: absolute
+	width: 3px
+	height: 15px
+	left: 30%
+	top: -6px
+
+	background: #333
+
+.filmPlayer-controls-fullscreenRestore
+
+	position: absolute
+	height: 16px
+	width: 26px
+	left: calc(100% - 210px + 90px + 40px)
+	top: -2px
+	@include transition(all 0.3s)
+
+	border: 2px solid #333
+	border-radius: 2px

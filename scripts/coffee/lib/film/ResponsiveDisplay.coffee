@@ -34,6 +34,19 @@ module.exports = class ResponsiveDisplay extends Emitter
 
 			do @toggle
 
+		do @_prepareLayers
+
+	_prepareLayers: ->
+
+		@_stageLayer = El '.film-display-view-stageLayer'
+		.inside @view
+
+		@bg = El '.film-display-view-bg'
+		.inside @view
+
+		@stage = El '.film-display-view-stage'
+		.inside @_stageLayer
+
 	_layout: (emit = yes) ->
 
 		@fullscreenDims.width = @_dummy.node.clientWidth

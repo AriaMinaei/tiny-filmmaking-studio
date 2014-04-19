@@ -1,6 +1,5 @@
-Display = require './film/Display'
-HallowText = require './tools/HallowText'
 object = require 'utila/scripts/js/lib/object'
+HallowText = require './tools/HallowText'
 
 module.exports = class Film
 
@@ -13,8 +12,6 @@ module.exports = class Film
 		object.overrideOnto @options, options
 
 		do @_initRaf
-
-		@display = new Display @
 
 		@sets = {}
 
