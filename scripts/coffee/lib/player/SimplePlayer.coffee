@@ -6,6 +6,10 @@ module.exports = class RegularPlayer
 
 		@display = @film.display
 
+		@moosh = @film.moosh
+
+		@kilid = @film.kilid
+
 		@timeControl = @film.theatre.model.timeControl
 
 		do @_prepareNodes
@@ -37,7 +41,8 @@ module.exports = class RegularPlayer
 		@playPauseNode = El '.simplePlayer-playPause'
 		.inside @containerNode
 
-		@playPauseNode.node.addEventListener 'click', =>
+		@moosh.onClick @playPauseNode
+		.onDone =>
 
 			@timeControl.togglePlayState()
 
@@ -46,7 +51,8 @@ module.exports = class RegularPlayer
 		@fullscreenRestoreNode = El '.simplePlayer-fullscreenRestore'
 		.inside @containerNode
 
-		@fullscreenRestoreNode.node.addEventListener 'click', =>
+		@moosh.onClick @fullscreenRestoreNode
+		.onDone =>
 
 			@display.toggle()
 
@@ -54,6 +60,25 @@ module.exports = class RegularPlayer
 
 		@seekbarNode = El '.simplePlayer-seekbar'
 		.inside @containerNode
+
+		seekbarWidth = 0
+		startingPos = 0
+
+		@moosh.onDrag @seekbarNode
+		.onDown (e) =>
+
+			seekbarWidth = @seekbarNode.node.clientWidth
+			startingPos = e.layerX
+
+			@timeControl.tick (startingPos) / seekbarWidth * @timeControl.duration
+
+		.onDrag (e) =>
+
+			@timeControl.tick (e.absX + startingPos) / seekbarWidth * @timeControl.duration
+
+		do @_prepareSeeker
+
+	_prepareSeeker: ->
 
 		@seekerNode = El '.simplePlayer-seekbar-seeker'
 		.inside @seekbarNode

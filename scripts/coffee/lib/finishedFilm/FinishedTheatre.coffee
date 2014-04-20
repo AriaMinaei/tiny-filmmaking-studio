@@ -13,16 +13,6 @@ module.exports = class FinishedTheatre
 
 		@film.onTick @model.tick
 
-		setTimeout =>
-
-			return
-
-			@model.timeControl.tick 15000
-
-			@model.timeControl.togglePlayState()
-
-		, 20
-
 	run: ->
 
 		@model.run()
