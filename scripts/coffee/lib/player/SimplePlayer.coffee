@@ -35,6 +35,7 @@ module.exports = class RegularPlayer
 		do @_preparePlayPause
 		do @_prepareSeekbar
 		do @_prepareFullscreenRestore
+		do @_prepareLoader
 
 	_preparePlayPause: ->
 
@@ -108,3 +109,19 @@ module.exports = class RegularPlayer
 		percent = @timeControl.t / @timeControl.duration
 
 		@seekerNode.css left: "#{percent * 100.0}%"
+
+	_prepareLoader: ->
+
+		@loadBar = El '.simplePlayer-loadbar'
+		.inside @containerNode
+
+		@loadIndicator = El '.simplePlayer-loadBar-loadIndicator'
+		.inside @loadBar
+
+		@film.loader.on 'progress', => do @_updateLoadProgress
+
+	_updateLoadProgress: ->
+
+		progress = @film.loader.progress
+
+		@loadIndicator.css width: "#{progress * 100.0}%"

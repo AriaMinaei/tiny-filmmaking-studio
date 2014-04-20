@@ -64,6 +64,7 @@
 	position: absolute
 
 	width: calc(100% - 210px)
+	height: 30px
 	@include transition(all 0.3s)
 
 	left: 90px
@@ -79,6 +80,17 @@
 		height: 3px
 
 		background: #333
+
+	&:after
+
+		@include psuedo
+
+		position: absolute
+
+		left: 0
+		right: 0
+		top: -6px
+		bottom: 6px
 
 .simplePlayer-seekbar-seeker
 
@@ -101,3 +113,27 @@
 
 	border: 2px solid #333
 	border-radius: 2px
+
+.simplePlayer-loadbar
+
+	position: absolute
+
+	pointer-events: none
+
+	width: calc(100% - 210px)
+	height: 30px
+	@include transition(all 0.3s)
+
+	left: 90px
+	top: 6px
+
+.simplePlayer-loadBar-loadIndicator
+
+	position: absolute
+
+	width: 0
+	height: 3px
+
+	background: red
+
+	@include transition(width 0.3s)
