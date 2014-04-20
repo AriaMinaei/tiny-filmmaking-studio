@@ -1,7 +1,7 @@
 object = require 'utila/scripts/js/lib/object'
 HallowText = require './tools/HallowText'
 
-module.exports = class Film
+module.exports = class _Film
 
 	constructor: (options = {}) ->
 
@@ -40,6 +40,12 @@ module.exports = class Film
 			throw Error "Set '#{id}' already exists"
 
 		@sets[id] = set
+
+		@
+
+	run: ->
+
+		@theatre.run()
 
 		@
 
@@ -125,30 +131,30 @@ module.exports = class Film
 			actor.addPropOfObject 'Width', objName, 'widthNormalized', 0
 			actor.addPropOfObject 'Height', objName, 'heightNormalized', 0
 
-		if 'hallowText' in props
+		# if 'hallowText' in props
 
-			hallowText = new HallowText el, 5
+		# 	hallowText = new HallowText el, 5
 
-			hallowTextObjectName = objName + '-hallowText'
+		# 	hallowTextObjectName = objName + '-hallowText'
 
-			@theatre.timeline.addObject hallowTextObjectName, hallowText
+		# 	@theatre.timeline.addObject hallowTextObjectName, hallowText
 
-			hallowActor = @theatre.model.graph.getGroup groupName
-			.getActor actorName + ' - HallowText'
+		# 	hallowActor = @theatre.model.graph.getGroup groupName
+		# 	.getActor actorName + ' - HallowText'
 
-			@_addNormalizedAlternative hallowText, 'setBaseRadius', 'setBaseRadiusNormalized'
-			@_addNormalizedAlternative hallowText, 'setMaxMotionRadius', 'setMaxMotionRadiusNormalized'
-			@_addNormalizedAlternative hallowText, 'setVelocityX', 'setVelocityXNormalized'
-			@_addNormalizedAlternative hallowText, 'setVelocityY', 'setVelocityYNormalized'
+		# 	@_addNormalizedAlternative hallowText, 'setBaseRadius', 'setBaseRadiusNormalized'
+		# 	@_addNormalizedAlternative hallowText, 'setMaxMotionRadius', 'setMaxMotionRadiusNormalized'
+		# 	@_addNormalizedAlternative hallowText, 'setVelocityX', 'setVelocityXNormalized'
+		# 	@_addNormalizedAlternative hallowText, 'setVelocityY', 'setVelocityYNormalized'
 
-			hallowActor.addPropOfObject 'Base Radius', hallowTextObjectName, 'setBaseRadiusNormalized', 0
-			hallowActor.addPropOfObject 'Max Motion Radius', hallowTextObjectName, 'setMaxMotionRadiusNormalized', 10
-			hallowActor.addPropOfObject 'Samples', hallowTextObjectName, 'setSamples', 5
+		# 	hallowActor.addPropOfObject 'Base Radius', hallowTextObjectName, 'setBaseRadiusNormalized', 0
+		# 	hallowActor.addPropOfObject 'Max Motion Radius', hallowTextObjectName, 'setMaxMotionRadiusNormalized', 10
+		# 	hallowActor.addPropOfObject 'Samples', hallowTextObjectName, 'setSamples', 5
 
-			hallowActor.addPropOfObject 'Velocity X', hallowTextObjectName, 'setVelocityXNormalized', 0
-			hallowActor.addPropOfObject 'Velocity Y', hallowTextObjectName, 'setVelocityYNormalized', 0
+		# 	hallowActor.addPropOfObject 'Velocity X', hallowTextObjectName, 'setVelocityXNormalized', 0
+		# 	hallowActor.addPropOfObject 'Velocity Y', hallowTextObjectName, 'setVelocityYNormalized', 0
 
-		if 'wysihwyg' in props
+		if 'wysihwyg' in props and @wysihwyg?
 
 			@wysihwyg.control el,
 
