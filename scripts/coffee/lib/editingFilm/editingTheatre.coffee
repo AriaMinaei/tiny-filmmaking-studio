@@ -33,6 +33,10 @@ module.exports = class EditingTheatre
 
 			do @_toggleDisplayFittingMethod
 
+	run: ->
+
+		@model.run()
+
 	_toggleDisplayFittingMethod: =>
 
 		@_fitDisplayWithMainBox = not @_fitDisplayWithMainBox
