@@ -29,10 +29,6 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 
 		@restore no
 
-		@el.node.addEventListener 'click', =>
-
-			do @toggle
-
 		do @_prepareLayers
 
 	_layout: (emit = yes) ->
@@ -87,11 +83,11 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 
 		if animated
 
-			@el.addClass 'film-animatedDisplay'
+			@el.addClass 'animated'
 
 		else
 
-			@el.removeClass 'film-animatedDisplay'
+			@el.removeClass 'animated'
 
 		@parent.removeClass 'film-unscrollableDisplayParent'
 
@@ -111,11 +107,11 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 
 		if animated
 
-			@el.addClass 'film-animatedDisplay'
+			@el.addClass 'animated'
 
 		else
 
-			@el.removeClass 'film-animatedDisplay'
+			@el.removeClass 'animated'
 
 		@parent.addClass 'film-unscrollableDisplayParent'
 
