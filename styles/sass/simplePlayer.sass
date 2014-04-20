@@ -1,0 +1,103 @@
+@import "./setup/mixins"
+
+.simplePlayer
+
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 11
+
+	@include transform-style(flat)
+	@include transition(all 0.3s)
+
+.simplePlayer-container
+
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	height: 50px
+
+.simplePlayer-playPause
+
+	position: absolute
+
+	left: 50px
+	width: 12px
+	height: 12px
+
+	&.playing
+
+		&:before, &:after
+
+			@include psuedo
+
+			position: absolute
+			width: 5px
+			height: 15px
+
+			background: #333
+
+			border: none
+
+		&:after
+
+			left: 9px
+
+	&:after
+
+		@include psuedo
+
+		position: absolute
+
+		width: 0px
+		height: 0px
+		border-style: solid
+		border-width: 8.5px 0 8.5px 12px
+		border-color: transparent transparent transparent #333333
+
+		left: 3px
+
+
+.simplePlayer-seekbar
+
+	position: absolute
+
+	width: calc(100% - 210px)
+	@include transition(all 0.3s)
+
+	left: 90px
+	top: 6px
+
+	&:before
+
+		@include psuedo
+
+		position: absolute
+		left: 0
+		right: 0
+		height: 3px
+
+		background: #333
+
+.simplePlayer-seekbar-seeker
+
+	position: absolute
+	width: 3px
+	height: 15px
+	left: 0
+	top: -6px
+
+	background: #333
+
+.simplePlayer-fullscreenRestore
+
+	position: absolute
+	height: 16px
+	width: 26px
+	left: calc(100% - 210px + 90px + 40px)
+	top: -2px
+	@include transition(all 0.3s)
+
+	border: 2px solid #333
+	border-radius: 2px

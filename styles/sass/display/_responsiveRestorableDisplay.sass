@@ -9,8 +9,10 @@
 	@include transform-origin(top left)
 	@include transform-style(flat)
 
-	@include transition(-webkit-transform 0.3s)
-	@include transition(transform 0.3s)
+	&.animated
+
+		@include transition(-webkit-transform 0.3s)
+		@include transition(transform 0.3s)
 
 .film-display-view.responsive
 
