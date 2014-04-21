@@ -25,7 +25,13 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 		@view = El '.film-display-view.responsive'
 		.inside @el
 
-		window.addEventListener 'resize', => do @_layout
+		@_relayoutTimeout = -1
+
+		window.addEventListener 'resize', => do @_scheduleToRelayout
+
+		window.addEventListener 'load', => do @_scheduleToRelayout
+
+		do @_scheduleToRelayout
 
 		@restore no
 
@@ -136,3 +142,17 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 		else
 
 			@fullscreen animated
+
+	_scheduleToRelayout: ->
+
+		if @_relayoutTimeout is -1
+
+			clearTimeout @_relayoutTimeout
+
+			@_relayoutTimeout = -1
+
+		@_relayoutTimeout = setTimeout =>
+
+			do @_layout
+
+		, 200
