@@ -20,6 +20,14 @@ module.exports = class RegularPlayer
 
 		@display.on 'layout', => do @_layout
 
+		@display.on 'fullscreen', =>
+
+			@moosh.disableTouchScrolling()
+
+		@display.on 'restore', =>
+
+			@moosh.enableTouchScrolling()
+
 		@timeControl.on 'play-state-change', => do @_updatePlayState
 
 		@timeControl.on 'time-change', =>
