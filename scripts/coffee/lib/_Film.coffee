@@ -1,5 +1,6 @@
 object = require 'utila/scripts/js/lib/object'
 HallowText = require './tools/HallowText'
+Loader = require './finishedFilm/Loader'
 
 module.exports = class _Film
 
@@ -14,6 +15,8 @@ module.exports = class _Film
 		do @_initRaf
 
 		@sets = {}
+
+		@loader = new Loader
 
 	_initRaf: ->
 
@@ -117,6 +120,10 @@ module.exports = class _Film
 			actor.addPropOfObject 'Scale X', objName, 'scaleX', 1
 			actor.addPropOfObject 'Scale Y', objName, 'scaleY', 1
 			actor.addPropOfObject 'Scale Z', objName, 'scaleZ', 1
+
+		if 'scaleAll' in props
+
+			actor.addPropOfObject 'Scale', objName, 'scale', 1
 
 		if 'skew' in props
 
