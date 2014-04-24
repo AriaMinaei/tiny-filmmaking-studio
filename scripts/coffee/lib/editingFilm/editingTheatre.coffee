@@ -23,7 +23,7 @@ module.exports = class EditingTheatre
 
 		@model.communicateWith 'http://localhost:' + @film.options.port, @film.options.lane, @film.options.pass
 
-		@pieceBoundriesEventController = @timeline.addEventController 'Piece Boundries'
+		@setBoundriesEventController = @timeline.addEventController 'Set Boundries'
 
 		@film.kilid.on 'ctrl+shift+=', @_toggleDisplayFittingMethod
 

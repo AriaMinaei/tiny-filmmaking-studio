@@ -13,6 +13,8 @@ module.exports = class FinishedTheatre
 
 		@film.onTick @model.tick
 
+		@setBoundriesEventController = @timeline.addEventController 'Set Boundries'
+
 	run: ->
 
 		@model.run()

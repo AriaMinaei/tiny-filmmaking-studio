@@ -22,12 +22,18 @@ module.exports = class _Display extends Emitter
 		@stageContainer = El '.film-display-view-stageContainer'
 		.inside @stageLayer
 
-	makeSetContainer: ->
+	makeSetContainer: (inside = yes) ->
 
-		El '.film-display-view-stageContainer-setContainer'
-		.inside @stageContainer
+		el = El '.film-display-view-stageContainer-setContainer'
 
-	makeBgEl: ->
+		if inside then el.inside @stageContainer
+
+		el
+
+	makeBgEl: (inside = yes) ->
 
 		El '.film-display-view-bgEl'
-		.inside @bgLayer
+
+		if inside then el.inside @bgLayer
+
+		el
