@@ -9,8 +9,6 @@ module.exports = class _Display extends Emitter
 
 		@parentEl = El parentEl
 
-		@el.inside @parentEl
-
 	_prepareLayers: ->
 
 		@stageLayer = El '.film-display-view-stageLayer'

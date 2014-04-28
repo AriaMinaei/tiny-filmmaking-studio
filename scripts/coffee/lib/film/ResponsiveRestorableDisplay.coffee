@@ -1,13 +1,16 @@
 El = require 'stupid-dom-interface'
+Foxie = require 'foxie'
 _Display = require './_Display'
 
 module.exports = class ResponsiveRestorableDisplay extends _Display
 
 	constructor: (parent, restoreTarget) ->
 
-		@el = El '.film-responsiveRestorableDisplay'
-
 		super
+
+		@node = Foxie '.film-responsiveRestorableDisplay'
+		.putIn @parentEl
+		.z 1
 
 		@parent = El parent
 
@@ -15,15 +18,12 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 
 		@restoreTarget = El restoreTarget
 
-		@_dummy = El '.film-display-dummy'
-		.inside @parent
-
 		@fullscreenDims = width: 0, height: 0, top: 0, left: 0, scale: 1
 		@restoredDims = width: 0, height: 0, top: 0, left: 0, scaleX: 1, scaleY: 1
 		@currentDims = @restoredDims
 
 		@view = El '.film-display-view.responsive'
-		.inside @el
+		.inside @node
 
 		@_relayoutTimeout = -1
 
@@ -39,11 +39,11 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 
 	_layout: (emit = yes) ->
 
-		@fullscreenDims.width = @_dummy.node.clientWidth
-		@fullscreenDims.height = @_dummy.node.clientHeight
+		@fullscreenDims.width = window.innerWidth
+		@fullscreenDims.height = window.innerHeight
 
-		@el.width @fullscreenDims.width
-		@el.height @fullscreenDims.height
+		@node.setWidth @fullscreenDims.width
+		@node.setHeight @fullscreenDims.height
 
 		if @state is 'restored'
 
@@ -62,9 +62,10 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 		@fullscreenDims.left = window.scrollX
 		@fullscreenDims.top = window.scrollY
 
-		@el.x @fullscreenDims.left
-		@el.y @fullscreenDims.top
-		@el.scale @fullscreenDims.scale
+		@node.moveXTo @fullscreenDims.left
+		@node.moveYTo @fullscreenDims.top
+		@node.moveZTo 1
+		@node.scaleAllTo @fullscreenDims.scale
 
 	_layoutRestoreTarget: ->
 
@@ -80,20 +81,27 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 		@restoredDims.left = rect.left + window.scrollX
 		@restoredDims.top = rect.top + window.scrollY
 
-		@el.x @restoredDims.left
-		@el.y @restoredDims.top
-		@el.scaleX @restoredDims.scaleX
-		@el.scaleY @restoredDims.scaleY
+		@node.moveXTo parseInt @restoredDims.left
+		@node.moveYTo parseInt @restoredDims.top
+		@node.moveZTo 1
+		@node.scaleXTo @restoredDims.scaleX
+		@node.scaleYTo @restoredDims.scaleY
 
-	restore: (animated = yes) ->
+	_setAnimated: (animated) ->
 
 		if animated
 
-			@el.addClass 'animated'
+			@node.trans 500
 
 		else
 
-			@el.removeClass 'animated'
+			@node.noTrans()
+
+		return
+
+	restore: (animated = yes) ->
+
+		@_setAnimated animated
 
 		@parent.removeClass 'film-unscrollableDisplayParent'
 
@@ -111,15 +119,9 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 
 	fullscreen: (animated = yes) ->
 
-		if animated
+		@_setAnimated animated
 
-			@el.addClass 'animated'
-
-		else
-
-			@el.removeClass 'animated'
-
-		@parent.addClass 'film-unscrollableDisplayParent'
+		# @parent.addClass 'film-unscrollableDisplayParent'
 
 		@_layout no
 

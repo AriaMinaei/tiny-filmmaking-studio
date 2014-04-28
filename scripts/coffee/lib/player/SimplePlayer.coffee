@@ -1,4 +1,4 @@
-El = require 'stupid-dom-interface'
+Foxie = require 'foxie'
 
 module.exports = class RegularPlayer
 
@@ -14,6 +14,8 @@ module.exports = class RegularPlayer
 
 		@audio = @film.theatre.model.audio
 
+		@parent = @display.parent
+
 		do @_prepareNodes
 
 		do @_layout
@@ -22,11 +24,11 @@ module.exports = class RegularPlayer
 
 		@display.on 'fullscreen', =>
 
-			@moosh.disableTouchScrolling()
+			@moosh.disableScrolling()
 
 		@display.on 'restore', =>
 
-			@moosh.enableTouchScrolling()
+			@moosh.enableScrolling()
 
 		@timeControl.on 'play-state-change', => do @_updatePlayState
 
@@ -42,37 +44,48 @@ module.exports = class RegularPlayer
 
 			do @_showMovieLength
 
-		@audio.on 'mute-state-change', => do @_updateMuteState
+		# @audio.on 'mute-state-change', => do @_updateMuteState
 
 	_prepareNodes: ->
 
-		@node = El '.simplePlayer'
-		.inside @display.parent
+		# @node = Foxie '.simplePlayer'
+		# .putIn @display.parent
 
-		@containerNode = El '.simplePlayer-container'
-		.inside @node
+		# @containerNode = Foxie '.simplePlayer-container'
+		# .putIn @node
 
 		do @_preparePlayPause
-		do @_prepareMuteUnmute
+		# do @_prepareMuteUnmute
 		do @_prepareSeekbar
 		do @_prepareFullscreenRestore
-		do @_prepareLoader
+		# do @_prepareLoader
 		do @_prepareTimeIndicators
 
 	_preparePlayPause: ->
 
-		@playPauseNode = El '.simplePlayer-playPause'
-		.inside @containerNode
+		@playPauseNode = Foxie '.simplePlayer-playPause.icon-play-2'
+		.trans 500
+		.putIn @parent
 
 		@moosh.onClick @playPauseNode
 		.onDone =>
 
 			@timeControl.togglePlayState()
 
+	_relayPlayPause: ->
+
+		dims = @display.currentDims
+
+		@playPauseNode
+		.moveXTo parseInt dims.left + 50
+		.moveYTo parseInt dims.top + dims.height - 60
+		.moveZTo 1
+
 	_prepareMuteUnmute: ->
 
-		@muteUnmuteNode = El '.simplePlayer-muteUnmute'
-		.inside @containerNode
+		@muteUnmuteNode = Foxie '.simplePlayer-muteUnmute'
+		.trans 500
+		.putIn @containerNode
 
 		@moosh.onClick @muteUnmuteNode
 		.onDone =>
@@ -81,50 +94,97 @@ module.exports = class RegularPlayer
 
 	_prepareFullscreenRestore: ->
 
-		@fullscreenRestoreNode = El '.simplePlayer-fullscreenRestore'
-		.inside @containerNode
+		@fullscreenRestoreNode = Foxie '.simplePlayer-fullscreenRestore.icon-resize-full'
+		.trans 500
+		.putIn @parent
 
 		@moosh.onClick @fullscreenRestoreNode
 		.onDone =>
 
 			@display.toggle()
 
+	_relayFullscreenRestore: ->
+
+		dims = @display.currentDims
+
+		@fullscreenRestoreNode
+		.moveXTo parseInt dims.left + dims.width - 80
+		.moveYTo parseInt dims.top + dims.height - 60
+		.moveZTo 1
+
 	_prepareSeekbar: ->
 
-		@seekbarNode = El '.simplePlayer-seekbar'
-		.inside @containerNode
+		@seekbarNode = Foxie '.simplePlayer-seekbar'
+		.putIn @parent
+		.trans 500
 
 		seekbarWidth = 0
 		startingPos = 0
 
-		@moosh.onDrag @seekbarNode
-		.onDown (e) =>
+		# @moosh.onDrag @seekbarNode
+		# .onDown (e) =>
 
-			seekbarWidth = @seekbarNode.node.clientWidth
-			startingPos = e.layerX
+		# 	seekbarWidth = @seekbarNode.node.clientWidth
+		# 	startingPos = e.layerX
 
-			@timeControl.tick (startingPos) / seekbarWidth * @timeControl.duration
+		# 	@timeControl.tick (startingPos) / seekbarWidth * @timeControl.duration
 
-		.onDrag (e) =>
+		# .onDrag (e) =>
 
-			@timeControl.tick (e.absX + startingPos) / seekbarWidth * @timeControl.duration
+		# 	@timeControl.tick (e.absX + startingPos) / seekbarWidth * @timeControl.duration
 
 		do @_prepareSeeker
 
+	_relaySeekbar: ->
+
+		dims = @display.currentDims
+
+		width = parseInt dims.width - 150 - 164
+
+		@seekbarNode
+		.moveXTo left = parseInt dims.left + 150
+		.moveYTo top = parseInt dims.top + dims.height - 52
+		.scaleXTo width / 1000
+		.moveZTo 1
+
+		percent = @timeControl.t / @timeControl.duration
+
+		@seekerNode
+		.moveXTo left + (percent * width)
+		.moveYTo top - 5
+		.moveZTo 1
+
 	_prepareSeeker: ->
 
-		@seekerNode = El '.simplePlayer-seekbar-seeker'
-		.inside @seekbarNode
+		@seekerNode = Foxie '.simplePlayer-seekbar-seeker'
+		.trans 500
+		.putIn @parent
 
 	_prepareTimeIndicators: ->
 
-		@presentTimeNode = El '.simplePlayer-time .now'
-		.inside @containerNode
+		@presentTimeNode = Foxie '.simplePlayer-now'
+		.trans 500
+		.putIn @parent
 
 		@presentTimeNode.node.innerHTML = "00:00"
 
-		@movieLength = El '.simplePlayer-time .length'
-		.inside @containerNode
+		@movieLength = Foxie '.simplePlayer-length'
+		.trans 500
+		.putIn @parent
+
+	_relayTimeIndicators: ->
+
+		dims = @display.currentDims
+
+		@presentTimeNode
+		.moveXTo parseInt dims.left + 100
+		.moveYTo parseInt dims.top + dims.height - 74
+		.moveZTo 1
+
+		@movieLength
+		.moveXTo parseInt dims.left + dims.width - 150
+		.moveYTo parseInt dims.top + dims.height - 74
+		.moveZTo 1
 
 	_showPresentTime: ->
 
@@ -146,37 +206,46 @@ module.exports = class RegularPlayer
 
 	_layout: ->
 
-		dims = @display.currentDims
+		# dims = @display.currentDims
 
-		@node.width dims.width
-		.x parseInt dims.left
-		.y parseInt dims.top + dims.height
+		do @_relayFullscreenRestore
+		do @_relayPlayPause
+		do @_relayTimeIndicators
+		do @_relaySeekbar
+
+		# @node.width dims.width
+		# .moveXTo parseInt dims.left
+		# .moveYTo parseInt dims.top + dims.height
 
 	_updatePlayState: ->
 
 		if @timeControl.isPlaying()
 
-			@playPauseNode.addClass 'playing'
+			@playPauseNode
+			.removeClass 'icon-play-2'
+			.addClass 'icon-pause-2'
 
 		else
 
-			@playPauseNode.removeClass 'playing'
+			@playPauseNode
+			.removeClass 'icon-pause-2'
+			.addClass 'icon-play-2'
 
 		return
 
 	_repositionSeeker: ->
 
-		percent = @timeControl.t / @timeControl.duration
-
-		@seekerNode.css left: "#{percent * 100.0}%"
+		do @_relaySeekbar
 
 	_prepareLoader: ->
 
-		@loadBar = El '.simplePlayer-loadbar'
-		.inside @containerNode
+		@loadBar = Foxie '.simplePlayer-loadbar'
+		.trans 500
+		.putIn @containerNode
 
-		@loadIndicator = El '.simplePlayer-loadBar-loadIndicator'
-		.inside @loadBar
+		@loadIndicator = Foxie '.simplePlayer-loadBar-loadIndicator'
+		.trans 500
+		.putIn @loadBar
 
 		@film.loader.on 'progress', => do @_updateLoadProgress
 

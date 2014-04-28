@@ -20,10 +20,11 @@
   "dependencies": {
     "theatrejs": "~0.1.0-beta.14",
     "gila": "~0.1.0-beta.7",
-    "moosh": "0.1.0-beta.12",
+    "moosh": "0.1.0-beta.16",
     "kilid": "0.1.0-beta.7",
     "utila": "~0.3.2",
-    "stupid-dom-interface": "~0.1.0-beta.12"
+    "stupid-dom-interface": "~0.1.0-beta.12",
+    "foxie": "~0.1.16"
   },
   "devDependencies": {
     "coffee-script": "~1.7.1"

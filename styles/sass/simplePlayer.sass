@@ -1,115 +1,61 @@
 @import "./setup/mixins"
 
-.simplePlayer
+// .simplePlayer
 
-	position: absolute
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+// 	z-index: 11
+
+// 	@include transform-style(flat)
+	// @include transition(all 0.3s)
+
+// .simplePlayer-container
+
+// 	position: absolute
+// 	left: 20px
+// 	right: 20px
+// 	bottom: 0
+// 	height: 50px
+
+// 	background-color: rgba(0, 0, 0, .8)
+
+@mixin thingy
+
+	z-index: 11
 	top: 0
 	left: 0
-	z-index: 11
-
-	@include transform-style(flat)
-	@include transition(all 0.3s)
-
-.simplePlayer-container
-
 	position: absolute
-	left: 200px
-	right: 200px
-	bottom: 0
-	height: 50px
-
-	background-color: rgba(0, 0, 0, .8)
+	color: white
+	// @include transition(all 0.3s)
 
 .simplePlayer-playPause
 
-	position: absolute
-
-	height: 50px
-	width: 50px
-
-	left: 30px
-
-	background: url("../../icons/play.svg") no-repeat left center
-	background-size: 25px 25px
-
-	&.playing
-
-		background: url("../../icons/pause.svg") no-repeat left center
-		background-size: 25px 25px
-
-.simplePlayer-muteUnmute
-
-	position: absolute
-
-	height: 50px
-	width: 50px
-
-	left: 80px
-
-	background: url("../../icons/mute.svg") no-repeat left center
-	background-size: 25px 25px
-
-	&.muted
-
-		background: url("../../icons/unmute.svg") no-repeat left center
-		background-size: 25px 25px
+	@include thingy
 
 .simplePlayer-seekbar
 
-	position: absolute
+	@include thingy
 
-	width: calc(100% - 320px)
-	height: 50px
-	@include transition(all 0.3s)
+	width: 1000px
+	height: 3px
+	background: rgba(255, 255, 255, 0.5)
+	@include transform-origin(left)
 
-	left: 180px
-	top: 25px
-
-	&:before
-
-		@include psuedo
-
-		position: absolute
-		left: 0
-		right: 0
-		height: 1px
-
-		background: #666
-
-	&:after
-
-		@include psuedo
-
-		position: absolute
-
-		left: 0
-		right: 0
-		top: -6px
-		bottom: 6px
 
 .simplePlayer-seekbar-seeker
 
-	position: absolute
-	width: 9px
-	height: 9px
-	left: 0
-	top: -4px
-
-	border-radius: 50%
-
-	background: #666
+	@include thingy
+	width: 3px
+	height: 12px
+	background: white
 
 .simplePlayer-fullscreenRestore
 
-	position: absolute
+	@include thingy
+
 	height: 18px
 	width: 30px
-	right: 30px
-	top: 15px
-	@include transition(all 0.3s)
-
-	border: 1px solid #666
-	border-radius: 2px
 
 .simplePlayer-loadbar
 
@@ -135,23 +81,19 @@
 
 	@include transition(width 0.3s)
 
-.simplePlayer-time
+@mixin timeIndicator
 
-	position: absolute
+	@include thingy
 
 	width: 50px
 	height: 50px
 	line-height: 50px
 
-	color: #666
+	color: white
 
 	font-family: Droid Sans
 	font-size: 14px
 
-	&.now
+.simplePlayer-now, .simplePlayer-length
 
-		left: 130px
-
-	&.length
-
-		right: 70px
+	@include timeIndicator

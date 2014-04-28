@@ -5,11 +5,12 @@ module.exports = class ResponsiveFullscreenDisplay extends _Display
 
 	constructor: (parentEl = document.body) ->
 
-		@el = El '.film-responsiveFullscreenDisplay'
-
 		super
 
+		@node = El '.film-responsiveFullscreenDisplay'
+		@node.inside @parentEl
+
 		@view = El '.film-display-view.responsive'
-		.inside @el
+		.inside @node
 
 		do @_prepareLayers
