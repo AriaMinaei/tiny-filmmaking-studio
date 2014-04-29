@@ -427,6 +427,12 @@ module.exports = class RegularPlayer
 
 	_makeMouseVisible: ->
 
+		if @_mouseHideTimeout isnt -1
+
+			clearTimeout @_mouseHideTimeout
+
+			@_mouseHideTimeout = -1
+
 		return unless @_mouseIsHidden
 
 		@_mouseIsHidden = no
