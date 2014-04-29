@@ -1,25 +1,5 @@
 @import "./setup/mixins"
 
-// .simplePlayer
-
-// 	position: absolute
-// 	top: 0
-// 	left: 0
-// 	z-index: 11
-
-// 	@include transform-style(flat)
-	// @include transition(all 0.3s)
-
-// .simplePlayer-container
-
-// 	position: absolute
-// 	left: 20px
-// 	right: 20px
-// 	bottom: 0
-// 	height: 50px
-
-// 	background-color: rgba(0, 0, 0, .8)
-
 @mixin thingy
 
 	z-index: 11
@@ -27,20 +7,31 @@
 	left: 0
 	position: absolute
 	color: white
-	// @include transition(all 0.3s)
 
 .simplePlayer-playPause
 
 	@include thingy
+	cursor: pointer
 
 .simplePlayer-seekbar
 
 	@include thingy
 
 	width: 1000px
-	height: 3px
-	background: rgba(255, 255, 255, 0.5)
+	height: 16px
+
+	&:after
+
+		@include psuedo
+
+		top: 8px
+		height: 3px
+		position: absolute
+		width: 100%
+		background: rgba(255, 255, 255, 0.5)
+
 	@include transform-origin(left)
+	cursor: pointer
 
 
 .simplePlayer-seekbar-seeker
@@ -50,12 +41,15 @@
 	height: 12px
 	background: white
 
+	cursor: pointer
+
 .simplePlayer-fullscreenRestore
 
 	@include thingy
 
 	height: 18px
 	width: 30px
+	cursor: pointer
 
 .simplePlayer-loadbar
 

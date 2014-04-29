@@ -59,8 +59,8 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 
 	_reposAsFullscreen: ->
 
-		@fullscreenDims.left = window.scrollX
-		@fullscreenDims.top = window.scrollY
+		@fullscreenDims.left = (window.scrollX or window.pageXOffset)
+		@fullscreenDims.top = (window.scrollY or window.pageYOffset)
 
 		@node.moveXTo @fullscreenDims.left
 		@node.moveYTo @fullscreenDims.top
@@ -78,8 +78,8 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 
 		@restoredDims.scaleX = @restoredDims.width / @fullscreenDims.width
 		@restoredDims.scaleY = @restoredDims.height / @fullscreenDims.height
-		@restoredDims.left = rect.left + window.scrollX
-		@restoredDims.top = rect.top + window.scrollY
+		@restoredDims.left = rect.left + (window.scrollX or window.pageXOffset)
+		@restoredDims.top = rect.top + (window.scrollY or window.pageYOffset)
 
 		@node.moveXTo parseInt @restoredDims.left
 		@node.moveYTo parseInt @restoredDims.top
@@ -91,7 +91,7 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 
 		if animated
 
-			@node.trans 500
+			@node.trans 400
 
 		else
 
@@ -103,7 +103,7 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 
 		@_setAnimated animated
 
-		@parent.removeClass 'film-unscrollableDisplayParent'
+		# @parent.removeClass 'film-unscrollableDisplayParent'
 
 		@_layout no
 

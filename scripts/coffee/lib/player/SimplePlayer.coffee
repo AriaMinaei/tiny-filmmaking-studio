@@ -25,10 +25,12 @@ module.exports = class RegularPlayer
 		@display.on 'fullscreen', =>
 
 			@moosh.disableScrolling()
+			@kilid.disableScrolling()
 
 		@display.on 'restore', =>
 
 			@moosh.enableScrolling()
+			@kilid.enableScrolling()
 
 		@timeControl.on 'play-state-change', => do @_updatePlayState
 
@@ -48,12 +50,6 @@ module.exports = class RegularPlayer
 
 	_prepareNodes: ->
 
-		# @node = Foxie '.simplePlayer'
-		# .putIn @display.parent
-
-		# @containerNode = Foxie '.simplePlayer-container'
-		# .putIn @node
-
 		do @_preparePlayPause
 		# do @_prepareMuteUnmute
 		do @_prepareSeekbar
@@ -64,7 +60,7 @@ module.exports = class RegularPlayer
 	_preparePlayPause: ->
 
 		@playPauseNode = Foxie '.simplePlayer-playPause.icon-play-2'
-		.trans 500
+		.trans 400
 		.putIn @parent
 
 		@moosh.onClick @playPauseNode
@@ -84,7 +80,7 @@ module.exports = class RegularPlayer
 	_prepareMuteUnmute: ->
 
 		@muteUnmuteNode = Foxie '.simplePlayer-muteUnmute'
-		.trans 500
+		.trans 400
 		.putIn @containerNode
 
 		@moosh.onClick @muteUnmuteNode
@@ -95,7 +91,7 @@ module.exports = class RegularPlayer
 	_prepareFullscreenRestore: ->
 
 		@fullscreenRestoreNode = Foxie '.simplePlayer-fullscreenRestore.icon-resize-full'
-		.trans 500
+		.trans 400
 		.putIn @parent
 
 		@moosh.onClick @fullscreenRestoreNode
@@ -116,60 +112,71 @@ module.exports = class RegularPlayer
 
 		@seekbarNode = Foxie '.simplePlayer-seekbar'
 		.putIn @parent
-		.trans 500
+		.trans 400
 
 		seekbarWidth = 0
 		startingPos = 0
 
-		# @moosh.onDrag @seekbarNode
-		# .onDown (e) =>
+		@_seekbarDims =
 
-		# 	seekbarWidth = @seekbarNode.node.clientWidth
-		# 	startingPos = e.layerX
+			left: 0
+			top: 0
+			width: 0
 
-		# 	@timeControl.tick (startingPos) / seekbarWidth * @timeControl.duration
+		@moosh.onDrag @seekbarNode
+		.onDown (e) =>
 
-		# .onDrag (e) =>
+			seekbarWidth = @_seekbarDims.width
+			startingPos = e.layerX
 
-		# 	@timeControl.tick (e.absX + startingPos) / seekbarWidth * @timeControl.duration
+			@timeControl.tick (startingPos) / seekbarWidth * @timeControl.duration
+
+		.onDrag (e) =>
+
+			@timeControl.tick (e.absX + startingPos) / seekbarWidth * @timeControl.duration
 
 		do @_prepareSeeker
+
 
 	_relaySeekbar: ->
 
 		dims = @display.currentDims
 
-		width = parseInt dims.width - 150 - 164
+		@_seekbarDims.width = parseInt dims.width - 150 - 164
+
+		@_seekbarDims.left = parseInt dims.left + 150
+
+		@_seekbarDims.top = parseInt dims.top + dims.height - 60
 
 		@seekbarNode
-		.moveXTo left = parseInt dims.left + 150
-		.moveYTo top = parseInt dims.top + dims.height - 52
-		.scaleXTo width / 1000
+		.moveXTo @_seekbarDims.left
+		.moveYTo @_seekbarDims.top
+		.scaleXTo @_seekbarDims.width / 1000
 		.moveZTo 1
 
 		percent = @timeControl.t / @timeControl.duration
 
 		@seekerNode
-		.moveXTo left + (percent * width)
-		.moveYTo top - 5
+		.moveXTo @_seekbarDims.left + (percent * @_seekbarDims.width)
+		.moveYTo @_seekbarDims.top + 3
 		.moveZTo 1
 
 	_prepareSeeker: ->
 
 		@seekerNode = Foxie '.simplePlayer-seekbar-seeker'
-		.trans 500
+		.trans 400
 		.putIn @parent
 
 	_prepareTimeIndicators: ->
 
 		@presentTimeNode = Foxie '.simplePlayer-now'
-		.trans 500
+		.trans 400
 		.putIn @parent
 
 		@presentTimeNode.node.innerHTML = "00:00"
 
 		@movieLength = Foxie '.simplePlayer-length'
-		.trans 500
+		.trans 400
 		.putIn @parent
 
 	_relayTimeIndicators: ->
@@ -206,16 +213,10 @@ module.exports = class RegularPlayer
 
 	_layout: ->
 
-		# dims = @display.currentDims
-
 		do @_relayFullscreenRestore
 		do @_relayPlayPause
 		do @_relayTimeIndicators
 		do @_relaySeekbar
-
-		# @node.width dims.width
-		# .moveXTo parseInt dims.left
-		# .moveYTo parseInt dims.top + dims.height
 
 	_updatePlayState: ->
 
@@ -240,11 +241,11 @@ module.exports = class RegularPlayer
 	_prepareLoader: ->
 
 		@loadBar = Foxie '.simplePlayer-loadbar'
-		.trans 500
+		.trans 400
 		.putIn @containerNode
 
 		@loadIndicator = Foxie '.simplePlayer-loadBar-loadIndicator'
-		.trans 500
+		.trans 400
 		.putIn @loadBar
 
 		@film.loader.on 'progress', => do @_updateLoadProgress
