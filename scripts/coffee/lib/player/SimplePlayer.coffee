@@ -53,6 +53,10 @@ module.exports = class RegularPlayer
 
 		@_hideTimeout = -1
 
+		@_mouseIsHidden = no
+
+		@_mouseHideTimeout = -1
+
 		do @_prepareAutoHide
 
 	_prepareNodes: ->
@@ -306,20 +310,30 @@ module.exports = class RegularPlayer
 
 			do @_goVisible
 
+			do @_makeMouseVisible
+
 		@moosh.onHover document.body
 		.onMove (e) =>
 
 			return if @display.state is 'restored'
 
+			do @_makeMouseVisible
+
 			if @display.fullscreenDims.height - e.clientY > 100
 
 				do @_scheduleToHide
+
+				do @_scheduleToHideMouse
 
 			else
 
 				do @_goVisible
 
 			return
+
+		do @_makeNodesAnimateInOrder
+
+	_makeNodesAnimateInOrder: ->
 
 		nodes = [
 			2
@@ -344,6 +358,8 @@ module.exports = class RegularPlayer
 				continue
 
 			node.addClass 'n-' + n
+
+		return
 
 	_scheduleToHide: ->
 
@@ -388,3 +404,31 @@ module.exports = class RegularPlayer
 		@fullscreenRestoreNode.removeClass 'hidden'
 		@nowNode.removeClass 'hidden'
 		@durationNode.removeClass 'hidden'
+
+	_scheduleToHideMouse: ->
+
+		return if @_mouseIsHidden
+
+		return if @_mouseHideTimeout isnt -1
+
+		@_mouseHideTimeout = setTimeout =>
+
+			@_mouseHideTimeout = -1
+
+			@_mouseIsHidden = yes
+
+			do @_actuallyHideMouse
+
+		, 1100
+
+	_actuallyHideMouse: ->
+
+		document.body.style.cursor = 'none'
+
+	_makeMouseVisible: ->
+
+		return unless @_mouseIsHidden
+
+		@_mouseIsHidden = no
+
+		document.body.style.cursor = 'default'
