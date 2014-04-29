@@ -21,6 +21,15 @@
 				@include transition(all 0.05s)
 				@include transform(translate3d(0, -1px, 1px))
 
+		&:active
+
+			opacity: 1
+
+			&:before, & > .content
+
+				@include transition(all 0.02s)
+				@include transform(translate3d(0, 0px, 1px))
+
 	&:before, & > .content
 
 		position: relative

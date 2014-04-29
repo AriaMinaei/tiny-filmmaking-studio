@@ -27,11 +27,13 @@ module.exports = class RegularPlayer
 
 			@moosh.disableScrolling()
 			@kilid.disableScrolling()
+			do @_updateDisplayState
 
 		@display.on 'restore', =>
 
 			@moosh.enableScrolling()
 			@kilid.enableScrolling()
+			do @_updateDisplayState
 
 		@timeControl.on 'play-state-change', => do @_updatePlayState
 
@@ -256,6 +258,18 @@ module.exports = class RegularPlayer
 		.moveXTo parseInt dims.left + dims.width - 90
 		.moveYTo parseInt dims.top + dims.height - 63
 		.moveZTo 1
+
+	_updateDisplayState: ->
+
+		if @display.state is 'fullscreen'
+
+			@fullscreenRestoreNode.removeClass 'icon-resize-full'
+			@fullscreenRestoreNode.addClass 'icon-resize-small'
+
+		else
+
+			@fullscreenRestoreNode.addClass 'icon-resize-full'
+			@fullscreenRestoreNode.removeClass 'icon-resize-small'
 
 	_layout: ->
 
