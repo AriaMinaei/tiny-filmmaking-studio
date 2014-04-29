@@ -68,6 +68,10 @@ module.exports = class RegularPlayer
 
 			@timeControl.togglePlayState()
 
+		@kilid.on 'space', =>
+
+			@timeControl.togglePlayState()
+
 	_relayPlayPause: ->
 
 		dims = @display.currentDims
@@ -98,6 +102,12 @@ module.exports = class RegularPlayer
 		.onDone =>
 
 			@display.toggle()
+
+		@kilid.on 'esc', =>
+
+			if @display.state is 'fullscreen'
+
+				@display.restore()
 
 	_relayFullscreenRestore: ->
 
@@ -135,8 +145,23 @@ module.exports = class RegularPlayer
 
 			@timeControl.tick (e.absX + startingPos) / seekbarWidth * @timeControl.duration
 
-		do @_prepareSeeker
+		@kilid.on 'right', =>
 
+			@timeControl.seekBy 5000
+
+		@kilid.on 'left', =>
+
+			@timeControl.seekBy -5000
+
+		@kilid.on 'alt+right', =>
+
+			@timeControl.seekBy 1000
+
+		@kilid.on 'alt+left', =>
+
+			@timeControl.seekBy -1000
+
+		do @_prepareSeeker
 
 	_relaySeekbar: ->
 
