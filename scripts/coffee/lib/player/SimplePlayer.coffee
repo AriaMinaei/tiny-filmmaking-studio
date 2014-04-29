@@ -1,4 +1,5 @@
 Foxie = require 'foxie'
+El = require 'stupid-dom-interface'
 
 module.exports = class RegularPlayer
 
@@ -38,20 +39,23 @@ module.exports = class RegularPlayer
 
 			do @_repositionSeeker
 
-			do @_showPresentTime
+			do @_updateNowIndicator
 
 		@timeControl.on 'duration-change', =>
 
 			do @_repositionSeeker
 
-			do @_showMovieLength
+			do @_updateDurationIndicator
 
-		# @audio.on 'mute-state-change', => do @_updateMuteState
+		@_isHidden = no
+
+		@_hideTimeout = -1
+
+		do @_prepareAutoHide
 
 	_prepareNodes: ->
 
 		do @_preparePlayPause
-		# do @_prepareMuteUnmute
 		do @_prepareSeekbar
 		do @_prepareFullscreenRestore
 		# do @_prepareLoader
@@ -60,7 +64,7 @@ module.exports = class RegularPlayer
 	_preparePlayPause: ->
 
 		@playPauseNode = Foxie '.simplePlayer-playPause.icon-play-2'
-		.trans 400
+		.trans 520
 		.putIn @parent
 
 		@moosh.onClick @playPauseNode
@@ -77,46 +81,77 @@ module.exports = class RegularPlayer
 		dims = @display.currentDims
 
 		@playPauseNode
-		.moveXTo parseInt dims.left + 50
-		.moveYTo parseInt dims.top + dims.height - 60
+		.moveXTo parseInt dims.left + 55
+		.moveYTo parseInt dims.top + dims.height - 63
 		.moveZTo 1
 
-	_prepareMuteUnmute: ->
+	_updatePlayState: ->
 
-		@muteUnmuteNode = Foxie '.simplePlayer-muteUnmute'
-		.trans 400
-		.putIn @containerNode
+		if @timeControl.isPlaying()
 
-		@moosh.onClick @muteUnmuteNode
-		.onDone =>
+			@playPauseNode
+			.removeClass 'icon-play-2'
+			.addClass 'icon-pause-2'
 
-			@audio.toggleMuteState()
+		else
 
-	_prepareFullscreenRestore: ->
+			@playPauseNode
+			.removeClass 'icon-pause-2'
+			.addClass 'icon-play-2'
 
-		@fullscreenRestoreNode = Foxie '.simplePlayer-fullscreenRestore.icon-resize-full'
-		.trans 400
+		return
+
+	_prepareTimeIndicators: ->
+
+		@nowNode = Foxie '.simplePlayer-now'
+		.trans 460
 		.putIn @parent
 
-		@moosh.onClick @fullscreenRestoreNode
-		.onDone =>
+		@nowNodeContent = El '.content'
+		.inside @nowNode
 
-			@display.toggle()
+		@nowNodeContent.html "00:00"
 
-		@kilid.on 'esc', =>
+		@durationNode = Foxie '.simplePlayer-duration'
+		.trans 460
+		.putIn @parent
 
-			if @display.state is 'fullscreen'
+		@durationNodeContent = El '.content'
+		.inside @durationNode
 
-				@display.restore()
-
-	_relayFullscreenRestore: ->
+	_relayTimeIndicators: ->
 
 		dims = @display.currentDims
 
-		@fullscreenRestoreNode
-		.moveXTo parseInt dims.left + dims.width - 80
-		.moveYTo parseInt dims.top + dims.height - 60
+		top = parseInt dims.top + dims.height - 72
+
+		@nowNode
+		.moveXTo parseInt dims.left + 98
+		.moveYTo top
 		.moveZTo 1
+
+		@durationNode
+		.moveXTo parseInt dims.left + dims.width - 147
+		.moveYTo top
+		.moveZTo 1
+
+	_updateNowIndicator: ->
+
+		time = @timeControl.t / 60000
+
+		minutes = @_pad(time | 0)
+		seconds = @_pad((time % 1 * 60) | 0)
+
+		@nowNodeContent.html "#{minutes}:#{seconds}"
+
+	_updateDurationIndicator: ->
+
+		length = @timeControl.duration / 60000
+
+		minutes = @_pad(length | 0)
+		seconds = @_pad((length % 1 * 60) | 0)
+
+		@durationNodeContent.html "#{minutes}:#{seconds}"
 
 	_prepareSeekbar: ->
 
@@ -171,7 +206,7 @@ module.exports = class RegularPlayer
 
 		@_seekbarDims.left = parseInt dims.left + 150
 
-		@_seekbarDims.top = parseInt dims.top + dims.height - 60
+		@_seekbarDims.top = parseInt dims.top + dims.height - 56
 
 		@seekbarNode
 		.moveXTo @_seekbarDims.left
@@ -192,75 +227,41 @@ module.exports = class RegularPlayer
 		.trans 400
 		.putIn @parent
 
-	_prepareTimeIndicators: ->
+	_repositionSeeker: ->
 
-		@presentTimeNode = Foxie '.simplePlayer-now'
-		.trans 400
+		do @_relaySeekbar
+
+	_prepareFullscreenRestore: ->
+
+		@fullscreenRestoreNode = Foxie '.simplePlayer-fullscreenRestore.icon-resize-full'
+		.trans 520
 		.putIn @parent
 
-		@presentTimeNode.node.innerHTML = "00:00"
+		@moosh.onClick @fullscreenRestoreNode
+		.onDone =>
 
-		@movieLength = Foxie '.simplePlayer-length'
-		.trans 400
-		.putIn @parent
+			@display.toggle()
 
-	_relayTimeIndicators: ->
+		@kilid.on 'esc', =>
+
+			if @display.state is 'fullscreen'
+
+				@display.restore()
+
+	_relayFullscreenRestore: ->
 
 		dims = @display.currentDims
 
-		@presentTimeNode
-		.moveXTo parseInt dims.left + 100
-		.moveYTo parseInt dims.top + dims.height - 74
+		@fullscreenRestoreNode
+		.moveXTo parseInt dims.left + dims.width - 90
+		.moveYTo parseInt dims.top + dims.height - 63
 		.moveZTo 1
-
-		@movieLength
-		.moveXTo parseInt dims.left + dims.width - 150
-		.moveYTo parseInt dims.top + dims.height - 74
-		.moveZTo 1
-
-	_showPresentTime: ->
-
-		time = @timeControl.t / 60000
-
-		minutes = @_pad(time | 0)
-		seconds = @_pad((time % 1 * 60) | 0)
-
-		@presentTimeNode.node.innerHTML = "#{minutes}:#{seconds}"
-
-	_showMovieLength: ->
-
-		length = @timeControl.duration / 60000
-
-		minutes = @_pad(length | 0)
-		seconds = @_pad((length % 1 * 60) | 0)
-
-		@movieLength.node.innerHTML = "#{minutes}:#{seconds}"
 
 	_layout: ->
 
 		do @_relayFullscreenRestore
 		do @_relayPlayPause
 		do @_relayTimeIndicators
-		do @_relaySeekbar
-
-	_updatePlayState: ->
-
-		if @timeControl.isPlaying()
-
-			@playPauseNode
-			.removeClass 'icon-play-2'
-			.addClass 'icon-pause-2'
-
-		else
-
-			@playPauseNode
-			.removeClass 'icon-pause-2'
-			.addClass 'icon-play-2'
-
-		return
-
-	_repositionSeeker: ->
-
 		do @_relaySeekbar
 
 	_prepareLoader: ->
@@ -281,18 +282,95 @@ module.exports = class RegularPlayer
 
 		@loadIndicator.css width: "#{progress * 100.0}%"
 
-	_updateMuteState: ->
-
-		if @audio.isMuted()
-
-			@muteUnmuteNode.addClass 'muted'
-
-		else
-
-			@muteUnmuteNode.removeClass 'muted'
-
-		return
-
 	_pad: (number) ->
 
 		if number < 10 then return "0#{number}" else return number
+
+	_prepareAutoHide: ->
+
+		@display.on 'restore', =>
+
+			do @_goVisible
+
+		@moosh.onHover document.body
+		.onMove (e) =>
+
+			return if @display.state is 'restored'
+
+			if @display.fullscreenDims.height - e.clientY > 100
+
+				do @_scheduleToHide
+
+			else
+
+				do @_goVisible
+
+			return
+
+		nodes = [
+			2
+			@playPauseNode
+			@fullscreenRestoreNode
+			3
+			@nowNode
+			@durationNode
+			4
+			@seekbarNode
+			@seekerNode
+		]
+
+		n = 0
+
+		for node in nodes
+
+			if typeof node is 'number'
+
+				n = node
+
+				continue
+
+			node.addClass 'n-' + n
+
+	_scheduleToHide: ->
+
+		return if @_isHidden
+
+		return if @_hideTimeout isnt -1
+
+		@_hideTimeout = setTimeout =>
+
+			@_hideTimeout = -1
+
+			@_isHidden = yes
+
+			do @_actuallyHide
+
+		, 1000
+
+	_actuallyHide: ->
+
+		@playPauseNode.addClass 'hidden'
+		@seekbarNode.addClass 'hidden'
+		@seekerNode.addClass 'hidden'
+		@fullscreenRestoreNode.addClass 'hidden'
+		@nowNode.addClass 'hidden'
+		@durationNode.addClass 'hidden'
+
+	_goVisible: ->
+
+		if @_hideTimeout isnt -1
+
+			clearTimeout @_hideTimeout
+
+			@_hideTimeout = -1
+
+		return unless @_isHidden
+
+		@_isHidden = no
+
+		@playPauseNode.removeClass 'hidden'
+		@seekbarNode.removeClass 'hidden'
+		@seekerNode.removeClass 'hidden'
+		@fullscreenRestoreNode.removeClass 'hidden'
+		@nowNode.removeClass 'hidden'
+		@durationNode.removeClass 'hidden'

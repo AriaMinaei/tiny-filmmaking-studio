@@ -1,12 +1,45 @@
 @import "./setup/mixins"
 
-@mixin thingy
+@mixin thingy($hover: true)
 
 	z-index: 11
 	top: 0
 	left: 0
 	position: absolute
 	color: white
+
+	@if $hover == true
+
+		opacity: 0.9
+
+		&:hover
+
+			opacity: 1
+
+			&:before, & > .content
+
+				@include transition(all 0.05s)
+				@include transform(translate3d(0, -1px, 1px))
+
+	&:before, & > .content
+
+		position: relative
+		@include transition(all 0.3s)
+		@include transform(translate3d(0, 0, 1px))
+
+	@for $i from 0 to 8
+
+		&.n-#{$i}
+
+			&:before, & > .content
+
+			&.hidden:before, &.hidden > .content
+
+				@include transform(translate3d(0, (10px + $i * 5px), 1px))
+
+	&.hidden:before, &.hidden > .content
+
+		opacity: 0
 
 .simplePlayer-playPause
 
@@ -15,33 +48,39 @@
 
 .simplePlayer-seekbar
 
-	@include thingy
+	@include thingy(false)
 
 	width: 1000px
 	height: 16px
 
-	&:after
+	&:before
 
 		@include psuedo
 
 		top: 8px
-		height: 3px
+		height: 2px
 		position: absolute
 		width: 100%
-		background: rgba(255, 255, 255, 0.5)
+		background: #888
 
 	@include transform-origin(left)
 	cursor: pointer
 
-
 .simplePlayer-seekbar-seeker
 
-	@include thingy
+	@include thingy(false)
 	width: 3px
 	height: 12px
-	background: white
 
 	cursor: pointer
+	pointer-events: none
+
+	&:before
+
+		@include psuedo
+		width: 100%
+		height: 100%
+		background: white
 
 .simplePlayer-fullscreenRestore
 
@@ -77,7 +116,7 @@
 
 @mixin timeIndicator
 
-	@include thingy
+	@include thingy(false)
 
 	width: 50px
 	height: 50px
@@ -86,8 +125,11 @@
 	color: white
 
 	font-family: Droid Sans
-	font-size: 14px
+	font-size: 13px
 
-.simplePlayer-now, .simplePlayer-length
+	@include user-select(none)
+	cursor: default
+
+.simplePlayer-now, .simplePlayer-duration
 
 	@include timeIndicator
