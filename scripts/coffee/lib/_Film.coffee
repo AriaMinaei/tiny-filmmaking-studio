@@ -99,6 +99,14 @@ module.exports = class _Film
 			actor.addPropOfObject 'Y', objName, 'yNormalized', 0
 			actor.addPropOfObject 'Z', objName, 'zNormalized', 0
 
+		else if 'xy' in props
+
+			@_addNormalizedAlternative el, 'x', 'xNormalized'
+			@_addNormalizedAlternative el, 'y', 'yNormalized'
+
+			actor.addPropOfObject 'X', objName, 'xNormalized', 0
+			actor.addPropOfObject 'Y', objName, 'yNormalized', 0
+
 		if not shouldAccountForProps or 'localTranslation' in props
 
 			@_addNormalizedAlternative el, 'localX', 'localXNormalized'
