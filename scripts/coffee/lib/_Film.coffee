@@ -89,6 +89,21 @@ module.exports = class _Film
 			actor.addPropOfObject 'Rotation Y', objName, 'rotateY', 0
 			actor.addPropOfObject 'Rotation Z', objName, 'rotateZ', 0
 
+		else
+
+			if 'rotationX' in props
+
+				actor.addPropOfObject 'Rotation X', objName, 'rotateX', 0
+
+			if 'rotationY' in props
+
+				actor.addPropOfObject 'Rotation Y', objName, 'rotateY', 0
+
+			if 'rotationZ' in props
+
+				actor.addPropOfObject 'Rotation Z', objName, 'rotateZ', 0
+
+
 		if not shouldAccountForProps or 'translation' in props
 
 			@_addNormalizedAlternative el, 'x', 'xNormalized'
@@ -120,6 +135,12 @@ module.exports = class _Film
 				@_addNormalizedAlternative el, 'y', 'yNormalized'
 
 				actor.addPropOfObject 'Y', objName, 'yNormalized', 0
+
+			if 'z' in props
+
+				@_addNormalizedAlternative el, 'z', 'zNormalized'
+
+				actor.addPropOfObject 'Z', objName, 'zNormalized', 0
 
 		if not shouldAccountForProps or 'localTranslation' in props
 
