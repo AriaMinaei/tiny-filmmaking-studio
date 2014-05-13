@@ -64,7 +64,7 @@ module.exports = class RegularPlayer
 		do @_preparePlayPause
 		do @_prepareSeekbar
 		do @_prepareFullscreenRestore
-		# do @_prepareLoader
+		do @_prepareLoader
 		do @_prepareTimeIndicators
 
 	_preparePlayPause: ->
@@ -73,14 +73,30 @@ module.exports = class RegularPlayer
 		.trans 520
 		.putIn @parent
 
+		done = no
+
+		setTimeout =>
+
+			if @film.loader.progress is 1
+
+				done = yes
+
+		, 50
+
+		@film.loader.on 'done', -> done = yes
+
+		console.log done
+
+		toggle = =>
+
+			return unless done
+
+			@timeControl.togglePlayState()
+
 		@moosh.onClick @playPauseNode
-		.onDone =>
+		.onDone toggle
 
-			@timeControl.togglePlayState()
-
-		@kilid.on 'space', =>
-
-			@timeControl.togglePlayState()
+		@kilid.on 'space', toggle
 
 	_relayPlayPause: ->
 
@@ -163,6 +179,7 @@ module.exports = class RegularPlayer
 
 		@seekbarNode = Foxie '.simplePlayer-seekbar'
 		.putIn @parent
+		.moveZTo 1
 		.trans 400
 
 		seekbarWidth = 0
@@ -218,20 +235,19 @@ module.exports = class RegularPlayer
 		.moveXTo @_seekbarDims.left
 		.moveYTo @_seekbarDims.top
 		.scaleXTo @_seekbarDims.width / 1000
-		.moveZTo 1
 
 		percent = @timeControl.t / @timeControl.duration
 
 		@seekerNode
 		.moveXTo @_seekbarDims.left + (percent * @_seekbarDims.width)
 		.moveYTo @_seekbarDims.top + 3
-		.moveZTo 1
 
 	_prepareSeeker: ->
 
 		@seekerNode = Foxie '.simplePlayer-seekbar-seeker'
 		.trans 400
 		.putIn @parent
+		.moveZTo 3
 
 	_repositionSeeker: ->
 
@@ -281,24 +297,37 @@ module.exports = class RegularPlayer
 		do @_relayPlayPause
 		do @_relayTimeIndicators
 		do @_relaySeekbar
+		do @_relayLoader
 
 	_prepareLoader: ->
 
-		@loadBar = Foxie '.simplePlayer-loadbar'
+		@loadIndicator = Foxie '.simplePlayer-loadIndicator'
+		.moveZTo 2
 		.trans 400
-		.putIn @containerNode
-
-		@loadIndicator = Foxie '.simplePlayer-loadBar-loadIndicator'
-		.trans 400
-		.putIn @loadBar
+		.putIn @parent
 
 		@film.loader.on 'progress', => do @_updateLoadProgress
 
-	_updateLoadProgress: ->
+	_relayLoader: ->
+
+		dims = @display.currentDims
 
 		progress = @film.loader.progress
 
-		@loadIndicator.css width: "#{progress * 100.0}%"
+		width = (parseInt dims.width - 150 - 164) * progress
+
+		left = parseInt dims.left + 150
+
+		top = parseInt dims.top + dims.height - 56
+
+		@loadIndicator
+		.moveXTo left
+		.moveYTo top
+		.scaleXTo width / 1000
+
+	_updateLoadProgress: ->
+
+		do @_relayLoader
 
 	_pad: (number) ->
 
@@ -342,6 +371,7 @@ module.exports = class RegularPlayer
 			3
 			@nowNode
 			@durationNode
+			@loadIndicator
 			4
 			@seekbarNode
 			@seekerNode
@@ -385,6 +415,7 @@ module.exports = class RegularPlayer
 		@fullscreenRestoreNode.addClass 'hidden'
 		@nowNode.addClass 'hidden'
 		@durationNode.addClass 'hidden'
+		@loadIndicator.addClass 'hidden'
 
 	_goVisible: ->
 
@@ -404,6 +435,7 @@ module.exports = class RegularPlayer
 		@fullscreenRestoreNode.removeClass 'hidden'
 		@nowNode.removeClass 'hidden'
 		@durationNode.removeClass 'hidden'
+		@loadIndicator.removeClass 'hidden'
 
 	_scheduleToHideMouse: ->
 

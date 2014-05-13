@@ -70,10 +70,31 @@
 		height: 2px
 		position: absolute
 		width: 100%
-		background: #888
+		background: rgba(255, 255, 255, 0.1)
 
 	@include transform-origin(left)
 	cursor: pointer
+
+.simplePlayer-loadIndicator
+
+	@include thingy(false)
+
+	width: 1000px
+	height: 16px
+
+	&:before
+
+		@include psuedo
+
+		top: 8px
+		height: 2px
+		position: absolute
+		width: 100%
+		background: rgba(255, 255, 255, 0.5)
+
+	@include transform-origin(left)
+	pointer-events: none
+	@include user-select(none)
 
 .simplePlayer-seekbar-seeker
 
@@ -91,6 +112,8 @@
 		height: 100%
 		background: white
 
+	z-index: 5
+
 .simplePlayer-fullscreenRestore
 
 	@include thingy
@@ -99,29 +122,9 @@
 	width: 30px
 	cursor: pointer
 
-.simplePlayer-loadbar
 
-	position: absolute
 
-	pointer-events: none
 
-	width: calc(100% - 210px)
-	height: 30px
-	@include transition(all 0.3s)
-
-	left: 90px
-	top: 6px
-
-.simplePlayer-loadBar-loadIndicator
-
-	position: absolute
-
-	width: 0
-	height: 3px
-
-	background: rgba(1, 1, 1, 0)
-
-	@include transition(width 0.3s)
 
 @mixin timeIndicator
 

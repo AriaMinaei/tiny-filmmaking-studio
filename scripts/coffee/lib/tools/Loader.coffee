@@ -1,5 +1,6 @@
 Emitter = require 'utila/scripts/js/lib/Emitter'
 ImageLoader = require './loader/ImageLoader'
+AudioLoader = require './loader/AudioLoader'
 
 module.exports = class Loader extends Emitter
 
@@ -19,6 +20,12 @@ module.exports = class Loader extends Emitter
 
 		@
 
+	loadAudio: (address, size) ->
+
+		new AudioLoader @, address, size
+
+		@
+
 	_queue: (bytes) ->
 
 		@total += bytes
@@ -35,8 +42,10 @@ module.exports = class Loader extends Emitter
 
 		@progress = @loaded / @total
 
-		@_emit 'progress'
+		if @progress >= 0.98
 
-		if @progress >= 0.999
+			@progress = 1
 
 			@_emit 'done'
+
+		@_emit 'progress'
