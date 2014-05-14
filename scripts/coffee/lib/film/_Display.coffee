@@ -3,11 +3,9 @@ Emitter = require 'utila/scripts/js/lib/Emitter'
 
 module.exports = class _Display extends Emitter
 
-	constructor: (parentEl = document.body) ->
+	constructor: (parent = document.body) ->
 
 		super
-
-		@parentEl = El parentEl
 
 	_prepareLayers: ->
 

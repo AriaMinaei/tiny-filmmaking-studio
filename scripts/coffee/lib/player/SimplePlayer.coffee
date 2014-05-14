@@ -85,8 +85,6 @@ module.exports = class RegularPlayer
 
 		@film.loader.on 'done', -> done = yes
 
-		console.log done
-
 		toggle = =>
 
 			return unless done

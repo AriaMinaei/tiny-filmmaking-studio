@@ -3,12 +3,14 @@ _Display = require './_Display'
 
 module.exports = class ResponsiveFullscreenDisplay extends _Display
 
-	constructor: (parentEl = document.body) ->
+	constructor: (parent = document.body) ->
 
 		super
 
+		@parent = El parent
+
 		@node = El '.film-responsiveFullscreenDisplay'
-		@node.inside @parentEl
+		@node.inside @parent
 
 		@view = El '.film-display-view.responsive'
 		.inside @node

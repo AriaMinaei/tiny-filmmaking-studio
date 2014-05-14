@@ -14,6 +14,10 @@ module.exports = class Set
 
 		@film._setupDomEl.apply @film, arguments
 
+	_setupObject: ->
+
+		@film._setupObject.apply @film, arguments
+
 	_makeEl: (s) ->
 
 		El s

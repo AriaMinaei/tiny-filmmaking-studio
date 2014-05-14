@@ -8,11 +8,11 @@ module.exports = class ResponsiveRestorableDisplay extends _Display
 
 		super
 
-		@node = Foxie '.film-responsiveRestorableDisplay'
-		.putIn @parentEl
-		.z 1
-
 		@parent = El parent
+
+		@node = Foxie '.film-responsiveRestorableDisplay'
+		.putIn @parent
+		.z 1
 
 		@state = 'restored'
 

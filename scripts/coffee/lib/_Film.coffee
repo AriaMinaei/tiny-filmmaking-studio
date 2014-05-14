@@ -68,6 +68,21 @@ module.exports = class _Film
 
 		return
 
+	_setupObject: (groupName, actorName, obj, methods) ->
+
+		objName = String(groupName + ' ' + actorName).replace(/\s+/g, '-').toLowerCase()
+
+		actor = @theatre.model.graph.getGroup groupName
+		.getActor actorName
+
+		@theatre.timeline.addObject objName, obj
+
+		for name in methods
+
+			actor.addPropOfObject name, objName, name, 0
+
+		return
+
 	_setupDomEl: (groupName, actorName, el, props) ->
 
 		objName = String(groupName + ' ' + actorName).replace(/\s+/g, '-').toLowerCase()
