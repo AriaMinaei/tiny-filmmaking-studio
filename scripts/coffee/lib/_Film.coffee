@@ -83,6 +83,29 @@ module.exports = class _Film
 
 		return
 
+	_setupTangled: (groupName, actorName, propName, originalObject, props) ->
+
+		objName = String(groupName + ' ' + actorName + ' ' + propName).replace(/\s+/g, '-').toLowerCase()
+
+		actor = @theatre.model.graph.getGroup groupName
+		.getActor actorName
+
+		obj = applyProgress: (prog) ->
+
+			for name, range of props
+
+				originalObject[name] range[0] + prog * (range[1] - range[0])
+
+		@theatre.timeline.addObject objName, obj
+
+		for name, range of props
+
+			props[name] = new Float32Array range
+
+		actor.addPropOfObject propName, objName, 'applyProgress', 0
+
+		return
+
 	_setupDomEl: (groupName, actorName, el, props) ->
 
 		objName = String(groupName + ' ' + actorName).replace(/\s+/g, '-').toLowerCase()

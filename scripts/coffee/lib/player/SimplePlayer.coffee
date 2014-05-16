@@ -87,14 +87,14 @@ module.exports = class RegularPlayer
 
 		toggle = =>
 
-			return unless done
+			# return unless done
 
 			@timeControl.togglePlayState()
 
 		@moosh.onClick @playPauseNode
 		.onDone toggle
 
-		@kilid.on 'space', toggle
+		@kilid.on 'space', toggle unless @film.constructor._editing
 
 	_relayPlayPause: ->
 
@@ -108,6 +108,8 @@ module.exports = class RegularPlayer
 	_updatePlayState: ->
 
 		if @timeControl.isPlaying()
+
+			@display.fullscreen()
 
 			@playPauseNode
 			.removeClass 'icon-play-2'
@@ -201,6 +203,10 @@ module.exports = class RegularPlayer
 
 			@timeControl.tick (e.absX + startingPos) / seekbarWidth * @timeControl.duration
 
+		do @_prepareSeeker
+
+		return unless @film.constructor._editing
+
 		@kilid.on 'right', =>
 
 			@timeControl.seekBy 5000
@@ -216,8 +222,6 @@ module.exports = class RegularPlayer
 		@kilid.on 'alt+left', =>
 
 			@timeControl.seekBy -1000
-
-		do @_prepareSeeker
 
 	_relaySeekbar: ->
 
@@ -262,6 +266,8 @@ module.exports = class RegularPlayer
 
 			@display.toggle()
 
+		return unless @film.constructor._editing
+
 		@kilid.on 'esc', =>
 
 			if @display.state is 'fullscreen'
@@ -286,6 +292,7 @@ module.exports = class RegularPlayer
 
 		else
 
+			@timeControl.pause()
 			@fullscreenRestoreNode.addClass 'icon-resize-full'
 			@fullscreenRestoreNode.removeClass 'icon-resize-small'
 

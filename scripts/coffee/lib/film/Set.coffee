@@ -18,6 +18,10 @@ module.exports = class Set
 
 		@film._setupObject.apply @film, arguments
 
+	_setupTangled: ->
+
+		@film._setupTangled.apply @film, arguments
+
 	_makeEl: (s) ->
 
 		El s

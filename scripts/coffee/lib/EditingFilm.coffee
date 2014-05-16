@@ -28,3 +28,5 @@ module.exports = class EditingFilm extends _Film
 	createDullSlideshow: (groupName, actorName, bgPrefix, bgPostfix) ->
 
 		new DullSlideshow @, groupName, actorName, bgPrefix, bgPostfix
+
+	@_editing: yes
