@@ -474,4 +474,4 @@ module.exports = class RegularPlayer
 
 		@_mouseIsHidden = no
 
-		document.body.style.cursor = 'default'
+		document.body.style.cursor = ''
