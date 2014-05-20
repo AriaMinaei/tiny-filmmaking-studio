@@ -66,17 +66,23 @@ module.exports = class Set
 
 			return
 
-		@_onTime range[0], (forward) ->
+		if range[0] isnt null
 
-			if forward
+			@_onTime range[0], (forward) ->
 
-				el.inside inside
+				if forward
 
-			else
+					el.inside inside
 
-				el.detach()
+				else
 
-			return
+					el.detach()
+
+				return
+
+		else
+
+			el.inside inside
 
 		return unless range[1]?
 
