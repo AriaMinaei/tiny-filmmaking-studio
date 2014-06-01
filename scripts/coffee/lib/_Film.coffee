@@ -263,7 +263,7 @@ module.exports = class _Film
 
 			port: 6543
 
-			pass: 'no pass'
+			passphrase: 'no pass'
 
 			sourceScreen: [1680, 1050]
 

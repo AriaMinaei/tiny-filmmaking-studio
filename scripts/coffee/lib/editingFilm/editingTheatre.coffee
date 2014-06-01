@@ -21,7 +21,7 @@ module.exports = class EditingTheatre
 
 		@film.onTick @view.tick
 
-		@model.communicateWith 'http://localhost:' + @film.options.port, @film.options.lane, @film.options.pass
+		@model.communicateWith 'http://localhost:' + @film.options.port, @film.options.lane, @film.options.passphrase
 
 		@setBoundriesEventController = @timeline.addEventController 'Set Boundries'
 
