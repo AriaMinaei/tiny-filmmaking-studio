@@ -1,7 +1,7 @@
 {
   "name": "tiny-filmmaking-studio",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.1.0-dev.1",
   "description": "(work in progress)",
   "main": "scripts/js/lib/tinyFilmmakingStudio.js",
   "scripts": {
@@ -18,13 +18,13 @@
     "url": "https://github.com/AriaMinaei/tiny-filmmaking-studio"
   },
   "dependencies": {
-    "theatrejs": "~0.1.0-beta.14",
+    "theatrejs": "~0.1.0-beta.17",
     "gila": "~0.1.0-beta.7",
-    "moosh": "~0.1.0-beta.17",
+    "moosh": "~0.1.0-beta.18",
     "kilid": "~0.1.0-beta.10",
-    "utila": "~0.3.2",
-    "stupid-dom-interface": "~0.1.0-beta.12",
-    "foxie": "~0.1.16"
+    "utila": "~0.3.3",
+    "stupid-dom-interface": "~0.1.0-beta.13",
+    "foxie": "0.1.16"
   },
   "devDependencies": {
     "coffee-script": "~1.7.1"
