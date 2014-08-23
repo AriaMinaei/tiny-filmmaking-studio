@@ -240,6 +240,8 @@ module.exports = class RegularPlayer
 
 		percent = @timeControl.t / @timeControl.duration
 
+		percent = 0.0 unless 0 <= percent <= 1
+
 		@seekerNode
 		.moveXTo @_seekbarDims.left + (percent * @_seekbarDims.width)
 		.moveYTo @_seekbarDims.top + 3
