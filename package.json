@@ -1,7 +1,7 @@
 {
   "name": "tiny-filmmaking-studio",
   "private": false,
-  "version": "0.1.0-dev.4",
+  "version": "0.1.0-dev.5",
   "description": "(work in progress)",
   "main": "scripts/js/lib/tinyFilmmakingStudio.js",
   "scripts": {
