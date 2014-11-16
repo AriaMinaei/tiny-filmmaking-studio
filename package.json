@@ -1,7 +1,7 @@
 {
   "name": "tiny-filmmaking-studio",
   "private": false,
-  "version": "0.1.0-dev.5",
+  "version": "0.1.0-dev.6",
   "description": "(work in progress)",
   "main": "scripts/js/lib/tinyFilmmakingStudio.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "gila": "~0.1.0-beta.7",
     "moosh": "~0.1.0-beta.18",
     "kilid": "~0.1.0-beta.10",
-    "utila": "~0.3.3",
+    "utila": "~0.4.0",
     "stupid-dom-interface": "~0.1.0-beta.13",
     "foxie": "0.1.16"
   },
