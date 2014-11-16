@@ -5,6 +5,8 @@ module.exports = class RegularPlayer
 
 	constructor: (@film) ->
 
+		@autoFullscreen = yes
+
 		@display = @film.display
 
 		@moosh = @film.moosh
@@ -109,7 +111,7 @@ module.exports = class RegularPlayer
 
 		if @timeControl.isPlaying()
 
-			@display.fullscreen()
+			@display.fullscreen() if @autoFullscreen
 
 			@playPauseNode
 			.removeClass 'icon-play-2'
@@ -294,7 +296,7 @@ module.exports = class RegularPlayer
 
 		else
 
-			@timeControl.pause()
+			@timeControl.pause() if @autoFullscreen
 			@fullscreenRestoreNode.addClass 'icon-resize-full'
 			@fullscreenRestoreNode.removeClass 'icon-resize-small'
 

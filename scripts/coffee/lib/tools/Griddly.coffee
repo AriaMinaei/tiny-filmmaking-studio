@@ -1,5 +1,5 @@
 Gila = require 'gila'
-object = require 'utila/scripts/js/lib/object'
+object = require 'utila/lib/object'
 
 module.exports = class Griddly
 

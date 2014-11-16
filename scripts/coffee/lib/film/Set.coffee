@@ -34,7 +34,7 @@ module.exports = class Set
 
 			fn: (forward, last, supposedT, currentT, args) ->
 
-				cb forward
+				cb forward, supposedT, currentT
 
 				return
 

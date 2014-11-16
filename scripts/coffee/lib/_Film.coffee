@@ -1,5 +1,5 @@
 HallowText = require './tools/HallowText'
-object = require 'utila/scripts/js/lib/object'
+object = require 'utila/lib/object'
 Loader = require './tools/Loader'
 
 module.exports = class _Film

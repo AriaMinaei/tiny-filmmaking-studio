@@ -1,6 +1,7 @@
-Emitter = require 'utila/scripts/js/lib/Emitter'
+Emitter = require 'utila/lib/Emitter'
 ImageLoader = require './loader/ImageLoader'
 AudioLoader = require './loader/AudioLoader'
+AudioDrivenTimeControlSingleTrackAudioApiLoader = require './loader/AudioDrivenTimeControlSingleTrackAudioApiLoader'
 
 module.exports = class Loader extends Emitter
 
@@ -23,6 +24,22 @@ module.exports = class Loader extends Emitter
 	loadAudio: (address, size) ->
 
 		new AudioLoader @, address, size
+
+		@
+
+	loadWithAudioDrivenTimeControl: (control, size) ->
+
+		if control._el?
+
+			@loadAudio control._el, size
+
+		else
+
+			@loadWithAudioDrivenTimeControlSingleTrackAudioApi control, size
+
+	loadWithAudioDrivenTimeControlSingleTrackAudioApi: (control, size) ->
+
+		new AudioDrivenTimeControlSingleTrackAudioApiLoader @, control, size
 
 		@
 
